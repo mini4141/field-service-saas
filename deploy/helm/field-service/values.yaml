@@ -1,0 +1,28 @@
+images:
+  registry: ""            # e.g. <account>.dkr.ecr.ap-southeast-2.amazonaws.com/field-service-saas (EKS); empty for kind
+  tag: dev
+  pullPolicy: IfNotPresent
+
+replicas: { api: 1, worker: 1, web: 1 }
+
+# kind: run postgres, redis and moto inside the cluster. EKS: false (RDS, ElastiCache, S3 are used instead).
+inCluster:
+  enabled: true
+
+config:
+  databaseUrl: postgresql://fss:fss@postgres:5432/fss?schema=public
+  redisUrl: redis://redis:6379
+  s3Bucket: fss-assets
+  s3Region: ap-southeast-2
+  s3Endpoint: http://moto:5000          # empty on AWS (real S3)
+  s3PublicEndpoint: http://localhost:5000
+  jwtSecret: change-me-in-values
+  internalHmacSecret: change-me-too
+
+serviceAccount:
+  name: fss              # EKS Pod Identity associates this account with the S3 role
+
+seed: true               # run demo seed after migrations
+
+ingress:
+  className: traefik

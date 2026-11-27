@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="1" failures="0" errors="0" time="0.0534252">
+    <testsuite name="src/JobCard.test.tsx" timestamp="2026-11-27T17:35:16.734Z" hostname="DESKTOP-LSTSC86" tests="1" failures="0" errors="0" skipped="0" time="0.0534252">
+        <testcase classname="src/JobCard.test.tsx" name="JobCard &gt; shows the job title, customer, address and status" time="0.0513163">
+            <system-err>
+onLayout relies on ResizeObserver which is not supported by your browser. Please include a polyfill, e.g., https://github.com/que-etc/resize-observer-polyfill.
+
+            </system-err>
+        </testcase>
+    </testsuite>
+</testsuites>

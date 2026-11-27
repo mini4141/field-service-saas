@@ -1,0 +1,21 @@
+{
+  "extends": "@fss/config/tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
+    "noEmit": true,
+    "allowJs": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": false,
+    "declaration": false,
+    "plugins": [{ "name": "next" }],
+    "paths": { "@/*": ["./src/*"] }
+  },
+  "include": ["next-env.d.ts", "src", "e2e", "vitest.config.ts", "playwright.config.ts", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

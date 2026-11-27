@@ -1,0 +1,18 @@
+# Official upstream chart: helm repo add traefik https://traefik.github.io/charts
+# EKS: a Service of type LoadBalancer becomes one NLB (no ALB, no NAT).
+service:
+  spec:
+    type: LoadBalancer
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: nlb
+    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
+ports:
+  websecure:
+    expose:
+      default: false
+providers:
+  kubernetesIngress:
+    publishedService:
+      enabled: true
+resources:
+  requests: { cpu: 50m, memory: 64Mi }

@@ -15,7 +15,8 @@ export class JsonLogger implements LoggerService {
       service: this.service,
       requestId: ctx?.requestId,
       companyId: ctx?.companyId,
-      msg: typeof message === "string" ? message : JSON.stringify(message),
+      msg: typeof message === "string" ? message : message instanceof Error ? message.message : JSON.stringify(message),
+      ...(message instanceof Error ? { stack: message.stack } : {}),
       ...(extra && extra.length && typeof extra[0] === "object" ? (extra[0] as object) : {}),
     };
     (level === "error" || level === "fatal" ? process.stderr : process.stdout).write(JSON.stringify(line) + "\n");

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="1" failures="0" errors="0" time="14.149">
-  <testsuite name="InvoiceService" errors="0" failures="0" skipped="0" timestamp="2026-11-27T16:02:56" time="13.159" tests="1">
+<testsuites name="jest tests" tests="1" failures="0" errors="0" time="9.147">
+  <testsuite name="InvoiceService" errors="0" failures="0" skipped="0" timestamp="2026-11-27T17:37:18" time="8.569" tests="1">
     <testcase classname="InvoiceService renders a PDF, uploads it to S3 and marks the invoice ready" name="InvoiceService renders a PDF, uploads it to S3 and marks the invoice ready" time="0.041">
     </testcase>
   </testsuite>

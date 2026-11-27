@@ -21,9 +21,10 @@ class InternalController {
     if (!ok) throw new UnauthorizedException("Bad signature");
     // key layout: photos/<companyId>/<jobId>/<file>
     const companyId = dto.key.split("/")[1];
-    await runWithContext({ companyId }, () =>
-      this.prisma.db.jobPhoto.updateMany({ where: { key: dto.key }, data: { thumbKey: dto.thumbKey } }),
-    );
+    // Prisma queries are lazy: they must be awaited *inside* the callback, or they run after the context is gone.
+    await runWithContext({ companyId }, async () => {
+      await this.prisma.db.jobPhoto.updateMany({ where: { key: dto.key }, data: { thumbKey: dto.thumbKey } });
+    });
     return { ok: true };
   }
 }

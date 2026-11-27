@@ -13,11 +13,15 @@
     "gen:api-client": "pnpm --filter @fss/api build:openapi && pnpm --filter @fss/api-client generate"
   },
   "devDependencies": {
-    "turbo": "^2.5.0",
-    "typescript": "~5.9.3",
-    "prisma": "~6.19.3",
+    "@fss/shared": "workspace:*",
     "@prisma/client": "~6.19.3",
-    "tsx": "^4.20.0"
+    "@types/node": "^24.0.0",
+    "bcryptjs": "^3.0.0",
+    "prisma": "~6.19.3",
+    "serve": "^14.2.8",
+    "tsx": "^4.20.0",
+    "turbo": "^2.5.0",
+    "typescript": "~5.9.3"
   },
   "prisma": {
     "schema": "prisma/schema.prisma",

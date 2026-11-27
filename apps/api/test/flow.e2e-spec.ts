@@ -3,6 +3,7 @@ import { INestApplication } from "@nestjs/common";
 import { getQueueToken } from "@nestjs/bullmq";
 import { Test } from "@nestjs/testing";
 import { Queue } from "bullmq";
+import { createHmac } from "node:crypto";
 import request from "supertest";
 import { QUEUES } from "@fss/shared";
 import { AppModule } from "../src/app.module";
@@ -91,5 +92,28 @@ describe("API flow (signup -> quote -> accept -> job -> complete -> invoice queu
 
     await http.get(`/api/v1/customers/${customer.id}`).set({ Authorization: `Bearer ${b}` }).expect(404);
     await http.get(`/api/v1/customers/${customer.id}`).set({ Authorization: `Bearer ${a}` }).expect(200);
+  });
+
+  it("accepts the signed thumbnail webhook and exposes the thumbnail on the job", async () => {
+    const owner = await signup(uniq());
+    const auth = { Authorization: `Bearer ${owner}` };
+    const customer = (await http.post("/api/v1/customers").set(auth).send({ name: "Thumb Co" }).expect(201)).body;
+    const quote = (await http.post("/api/v1/quotes").set(auth).send({
+      customerId: customer.id, title: "Photos", items: [{ description: "Work", qty: 1, unitPrice: 1000, taxPercent: 0 }],
+    }).expect(201)).body;
+    await http.post(`/api/v1/quotes/${quote.id}/send`).set(auth).expect(200);
+    await http.post(`/api/v1/public/quotes/${quote.token}/accept`).expect(200);
+    const jobId = (await http.get("/api/v1/jobs").set(auth).expect(200)).body[0].id;
+
+    const { key } = (await http.post("/api/v1/uploads/presign").set(auth)
+      .send({ jobId, filename: "a.png", contentType: "image/png" }).expect(200)).body;
+
+    const body = JSON.stringify({ key, thumbKey: key.replace("photos/", "thumbs/") + ".jpg" });
+    const sig = createHmac("sha256", process.env.INTERNAL_HMAC_SECRET ?? "dev-only-hmac").update(body).digest("hex");
+    await http.post("/api/v1/internal/photos/thumbnail-ready").set({ "content-type": "application/json", "x-signature": sig }).send(body).expect(200);
+    await http.post("/api/v1/internal/photos/thumbnail-ready").set({ "content-type": "application/json", "x-signature": "bad" }).send(body).expect(401);
+
+    const job = (await http.get(`/api/v1/jobs/${jobId}`).set(auth).expect(200)).body;
+    expect(job.photos[0].thumbUrl).toContain("thumbs/");
   });
 });

@@ -1,0 +1,102 @@
+{{- $img := .Values.images }}
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: {{ .Values.serviceAccount.name }}
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: fss-config
+type: Opaque
+stringData:
+  DATABASE_URL: {{ .Values.config.databaseUrl | quote }}
+  REDIS_URL: {{ .Values.config.redisUrl | quote }}
+  JWT_SECRET: {{ .Values.config.jwtSecret | quote }}
+  INTERNAL_HMAC_SECRET: {{ .Values.config.internalHmacSecret | quote }}
+  S3_BUCKET: {{ .Values.config.s3Bucket | quote }}
+  S3_REGION: {{ .Values.config.s3Region | quote }}
+  S3_ENDPOINT: {{ .Values.config.s3Endpoint | quote }}
+  S3_PUBLIC_ENDPOINT: {{ .Values.config.s3PublicEndpoint | quote }}
+  {{- if .Values.inCluster.enabled }}
+  AWS_ACCESS_KEY_ID: test
+  AWS_SECRET_ACCESS_KEY: test
+  {{- end }}
+{{- range $name, $port := dict "api" 4000 "worker" 4100 "web" 3000 }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $name }}
+  labels: { app: {{ $name }} }
+spec:
+  replicas: {{ index $.Values.replicas $name }}
+  selector:
+    matchLabels: { app: {{ $name }} }
+  template:
+    metadata:
+      labels: { app: {{ $name }} }
+    spec:
+      serviceAccountName: {{ $.Values.serviceAccount.name }}
+      containers:
+        - name: {{ $name }}
+          image: "{{ if $img.registry }}{{ $img.registry }}/{{ end }}fss-{{ $name }}:{{ $img.tag }}"
+          imagePullPolicy: {{ $img.pullPolicy }}
+          ports: [{ containerPort: {{ $port }} }]
+          envFrom: [{ secretRef: { name: fss-config } }]
+          env:
+            - { name: API_PORT, value: "4000" }
+            - { name: WORKER_PORT, value: "4100" }
+            - { name: API_INTERNAL_URL, value: "http://api:4000" }
+          readinessProbe:
+            httpGet: { path: {{ if eq $name "web" }}/login{{ else }}/healthz{{ end }}, port: {{ $port }} }
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          livenessProbe:
+            httpGet: { path: {{ if eq $name "web" }}/login{{ else }}/healthz{{ end }}, port: {{ $port }} }
+            initialDelaySeconds: 20
+            periodSeconds: 15
+          resources:
+            requests: { cpu: 50m, memory: 192Mi }
+            limits: { memory: 512Mi }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ $name }}
+spec:
+  selector: { app: {{ $name }} }
+  ports: [{ port: {{ $port }}, targetPort: {{ $port }} }]
+{{- end }}
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fss
+spec:
+  ingressClassName: {{ .Values.ingress.className }}
+  rules:
+    - http:
+        paths:
+          - { path: /api, pathType: Prefix, backend: { service: { name: api, port: { number: 4000 } } } }
+          - { path: /healthz, pathType: Exact, backend: { service: { name: api, port: { number: 4000 } } } }
+          - { path: /, pathType: Prefix, backend: { service: { name: web, port: { number: 3000 } } } }
+---
+# Migrations (+ demo seed) run as a Job after install/upgrade; retries until the database accepts connections.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: migrate-{{ .Release.Revision }}
+spec:
+  backoffLimit: 20
+  template:
+    spec:
+      serviceAccountName: {{ .Values.serviceAccount.name }}
+      restartPolicy: OnFailure
+      containers:
+        - name: migrate
+          image: "{{ if $img.registry }}{{ $img.registry }}/{{ end }}fss-api:{{ $img.tag }}"
+          imagePullPolicy: {{ $img.pullPolicy }}
+          workingDir: /repo
+          command: ["sh", "-c", "pnpm exec prisma migrate deploy{{ if .Values.seed }} && pnpm exec prisma db seed{{ end }}"]
+          envFrom: [{ secretRef: { name: fss-config } }]

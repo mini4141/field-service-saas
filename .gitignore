@@ -23,3 +23,5 @@ test-results/
 apps/mobile/dist/
 apps/api/openapi.json.tmp
 generated/
+infra/.build/
+reports/

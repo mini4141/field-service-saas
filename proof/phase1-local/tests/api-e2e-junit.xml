@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="3" failures="0" errors="0" time="13.314">
+  <testsuite name="API flow (signup -&gt; quote -&gt; accept -&gt; job -&gt; complete -&gt; invoice queued)" errors="0" failures="0" skipped="0" timestamp="2026-11-27T17:37:02" time="12.425" tests="3">
+    <testcase classname="API flow (signup -&gt; quote -&gt; accept -&gt; job -&gt; complete -&gt; invoice queued) runs the whole happy path and enqueues the invoice PDF job" name="API flow (signup -&gt; quote -&gt; accept -&gt; job -&gt; complete -&gt; invoice queued) runs the whole happy path and enqueues the invoice PDF job" time="0.617">
+    </testcase>
+    <testcase classname="API flow (signup -&gt; quote -&gt; accept -&gt; job -&gt; complete -&gt; invoice queued) returns 404 for another tenant&apos;s records" name="API flow (signup -&gt; quote -&gt; accept -&gt; job -&gt; complete -&gt; invoice queued) returns 404 for another tenant&apos;s records" time="0.3">
+    </testcase>
+    <testcase classname="API flow (signup -&gt; quote -&gt; accept -&gt; job -&gt; complete -&gt; invoice queued) accepts the signed thumbnail webhook and exposes the thumbnail on the job" name="API flow (signup -&gt; quote -&gt; accept -&gt; job -&gt; complete -&gt; invoice queued) accepts the signed thumbnail webhook and exposes the thumbnail on the job" time="0.308">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -3,45 +3,35 @@ on:
   push:
     branches: [main]
   pull_request:
+
 jobs:
   build-test:
     runs-on: ubuntu-latest
-    services:
-      postgres:
-        image: postgres:17.5
-        env: { POSTGRES_USER: fss, POSTGRES_PASSWORD: fss, POSTGRES_DB: fss }
-        ports: ["5432:5432"]
-        options: >-
-          --health-cmd "pg_isready -U fss" --health-interval 5s --health-timeout 5s --health-retries 10
-      redis:
-        image: redis:7.4
-        ports: ["6379:6379"]
-    env:
-      DATABASE_URL: postgresql://fss:fss@localhost:5432/fss?schema=public
-      REDIS_URL: redis://localhost:6379
-      JWT_SECRET: ci-secret
-      INTERNAL_HMAC_SECRET: ci-hmac
-      S3_BUCKET: fss-assets
-      S3_REGION: ap-southeast-2
-      AWS_ACCESS_KEY_ID: test
-      AWS_SECRET_ACCESS_KEY: test
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with: { node-version: 24, cache: pnpm }
-      - uses: actions/cache@v4
+      - name: Turborepo cache
+        uses: actions/cache@v4
         with:
           path: .turbo
-          key: turbo-${{ github.sha }}
-          restore-keys: turbo-
+          key: turbo-${{ runner.os }}-${{ github.sha }}
+          restore-keys: turbo-${{ runner.os }}-
       - run: pnpm install --frozen-lockfile
-      - run: pnpm exec prisma generate --schema prisma/schema.prisma
-      - run: pnpm exec prisma migrate deploy --schema prisma/schema.prisma
-      - run: pnpm turbo run build lint typecheck
-      - name: OpenAPI drift check
+      - run: pnpm exec playwright install --with-deps chromium
+      - name: OpenAPI contract drift check
         run: |
-          pnpm --filter @fss/api build:openapi
+          pnpm --filter @fss/shared build
+          pnpm --filter @fss/api build
           pnpm --filter @fss/api-client generate
           git diff --exit-code -- apps/api/openapi.json packages/api-client/src/schema.d.ts
-      - run: pnpm turbo run test
+      # lint, typecheck, build, Jest unit, Nest e2e (compose postgres/redis), Vitest, Playwright web + Expo web
+      - name: All cloud-free test layers
+        run: REPORT_DIR=$PWD/test-reports bash scripts/test-all.sh
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-reports
+          path: test-reports

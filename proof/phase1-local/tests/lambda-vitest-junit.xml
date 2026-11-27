@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="1" failures="0" errors="0" time="0.0698896">
+    <testsuite name="src/handler.test.ts" timestamp="2026-11-27T17:34:52.392Z" hostname="DESKTOP-LSTSC86" tests="1" failures="0" errors="0" skipped="0" time="0.0698896">
+        <testcase classname="src/handler.test.ts" name="thumbnailer handler &gt; resizes a fixture image to 320px, writes thumbs/ and calls the signed webhook" time="0.0678531">
+            <system-out>
+{&quot;ts&quot;:&quot;2026-11-27T17:34:52.306Z&quot;,&quot;level&quot;:&quot;log&quot;,&quot;service&quot;:&quot;thumbnailer&quot;,&quot;msg&quot;:&quot;thumbnail created&quot;,&quot;key&quot;:&quot;photos/co1/job1/a photo.png&quot;,&quot;thumbKey&quot;:&quot;thumbs/co1/job1/a photo.png.jpg&quot;,&quot;bytes&quot;:689}
+
+            </system-out>
+        </testcase>
+    </testsuite>
+</testsuites>

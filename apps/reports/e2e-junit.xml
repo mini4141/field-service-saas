@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="2" failures="0" errors="0" time="18.142">
-  <testsuite name="API flow (signup -&gt; quote -&gt; accept -&gt; job -&gt; complete -&gt; invoice queued)" errors="0" failures="0" skipped="0" timestamp="2026-11-27T15:59:54" time="17.648" tests="2">
-    <testcase classname="API flow (signup -&gt; quote -&gt; accept -&gt; job -&gt; complete -&gt; invoice queued) runs the whole happy path and enqueues the invoice PDF job" name="API flow (signup -&gt; quote -&gt; accept -&gt; job -&gt; complete -&gt; invoice queued) runs the whole happy path and enqueues the invoice PDF job" time="0.815">
-    </testcase>
-    <testcase classname="API flow (signup -&gt; quote -&gt; accept -&gt; job -&gt; complete -&gt; invoice queued) returns 404 for another tenant&apos;s records" name="API flow (signup -&gt; quote -&gt; accept -&gt; job -&gt; complete -&gt; invoice queued) returns 404 for another tenant&apos;s records" time="0.296">
-    </testcase>
-  </testsuite>
-</testsuites>

@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "Field Service",
+    "slug": "field-service-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "platforms": ["web", "android"],
+    "web": { "bundler": "metro", "output": "single" },
+    "android": { "package": "dev.fieldservice.mobile" },
+    "plugins": [["expo-image-picker", { "photosPermission": "Allow access to photos to attach them to jobs." }]]
+  }
+}

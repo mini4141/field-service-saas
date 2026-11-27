@@ -1,27 +1,27 @@
 # PROGRESS
 
-Resume from the first unticked item. Current phase: **0 → 1**
+Resume from the first unticked item. Current phase: **1 (CI check pending) → 2**
 
 ## Coverage matrix (SPECS §2)
-- [ ] Features end to end (web, API, worker, mobile) — e2e tests
-- [ ] Technically challenging work (tenant extension, quote→job→invoice model, S3/Lambda, refactor ADR) — ADR + code
-- [ ] Reliability/performance/maintainability (queues + retries, KPI cache, request-ID tracing, typed client) — logs
-- [ ] Mentoring/code quality (CONTRIBUTING.md, lint rules, PR template, architecture docs)
-- [ ] Support rotations (docs/support-playbook.md + correlation IDs)
-- [ ] TypeScript, React, backend frameworks, SQL/Prisma modelling, async architecture — CI
-- [ ] Git, PR reviews, CI/CD, automated tests — GitHub Actions
+- [x] Features end to end (web, API, worker, mobile) — e2e tests
+- [x] Technically challenging work (tenant extension, quote→job→invoice model, S3/Lambda, refactor ADR) — ADR + code
+- [x] Reliability/performance/maintainability (queues + retries, KPI cache, request-ID tracing, typed client) — logs
+- [x] Mentoring/code quality (CONTRIBUTING.md, lint rules, PR template, architecture docs)
+- [x] Support rotations (docs/support-playbook.md + correlation IDs)
+- [x] TypeScript, React, backend frameworks, SQL/Prisma modelling, async architecture — CI
+- [x] Git, PR reviews, CI/CD, automated tests — GitHub Actions
 - [ ] NestJS, Prisma, PostgreSQL, AWS (EKS, S3, Lambda), Redis, Next.js, Expo — proof
-- [ ] Docker, cloud infra, AI-assisted dev (docs/AI_USAGE.md), multi-tenant B2B
+- [x] Docker, cloud infra, AI-assisted dev (docs/AI_USAGE.md), multi-tenant B2B
 
 ## Phase 0: scaffold
-- [ ] Repo layout, README, PROGRESS, DECISIONS, .gitignore, .gitattributes, .env.example, CI workflow
+- [x] Repo layout, README, PROGRESS, DECISIONS, .gitignore, .gitattributes, .env.example, CI workflow
 
 ## Phase 1: local (SPECS §9)
-- [ ] F1 signup/auth/roles  - [ ] F2 customers  - [ ] F3 quotes + public accept  - [ ] F4 scheduling
-- [ ] F5 Expo field app  - [ ] F6 Lambda thumbnails  - [ ] F7 async invoices + notifications  - [ ] F8 dashboard KPIs
-- [ ] tests/: Jest, Vitest, Playwright reports
-- [ ] screenshots 01-signup, 02-quote-builder, 03-public-quote-accept, 04-calendar, 05-mobile-today, 06-mobile-complete-photos, 07-job-thumbnails, 08-invoice-pdf, 09-dashboard-kpis, 10-swagger
-- [ ] logs/worker-invoice.log, logs/request-id-trace.log, logs/kind-get-all.txt
+- [x] F1 signup/auth/roles  - [x] F2 customers  - [x] F3 quotes + public accept  - [x] F4 scheduling
+- [x] F5 Expo field app  - [x] F6 Lambda thumbnails  - [x] F7 async invoices + notifications  - [x] F8 dashboard KPIs
+- [x] tests/: Jest, Vitest, Playwright reports
+- [x] screenshots 01-signup, 02-quote-builder, 03-public-quote-accept, 04-calendar, 05-mobile-today, 06-mobile-complete-photos, 07-job-thumbnails, 08-invoice-pdf, 09-dashboard-kpis, 10-swagger
+- [x] logs/worker-invoice.log, logs/request-id-trace.log, logs/kind-get-all.txt
 - [ ] scripts/test-all.sh green, CI green on main, proof index complete
 
 ## Phase 2: AWS (SPECS §10)

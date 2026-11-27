@@ -1,0 +1,129 @@
+{"ts":"2026-11-27T17:32:34.779Z","level":"log","service":"api","msg":"Starting Nest application..."}
+{"ts":"2026-11-27T17:32:34.816Z","level":"log","service":"api","msg":"CoreModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.816Z","level":"log","service":"api","msg":"BullModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.820Z","level":"log","service":"api","msg":"JwtModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.820Z","level":"log","service":"api","msg":"DiscoveryModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.820Z","level":"log","service":"api","msg":"HealthModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.824Z","level":"log","service":"api","msg":"EventEmitterModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.824Z","level":"log","service":"api","msg":"CompaniesModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.824Z","level":"log","service":"api","msg":"UsersModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.824Z","level":"log","service":"api","msg":"CustomersModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.824Z","level":"log","service":"api","msg":"UploadsModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.825Z","level":"log","service":"api","msg":"InvoicesModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.825Z","level":"log","service":"api","msg":"DashboardModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.825Z","level":"log","service":"api","msg":"InternalModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.825Z","level":"log","service":"api","msg":"AppModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.825Z","level":"log","service":"api","msg":"QuotesModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.825Z","level":"log","service":"api","msg":"BullModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.825Z","level":"log","service":"api","msg":"BullModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.825Z","level":"log","service":"api","msg":"AuthModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.825Z","level":"log","service":"api","msg":"JobsModule dependencies initialized"}
+{"ts":"2026-11-27T17:32:34.931Z","level":"log","service":"api","msg":"AuthController {/api/v1/auth}:"}
+{"ts":"2026-11-27T17:32:34.937Z","level":"log","service":"api","msg":"Mapped {/api/v1/auth/signup, POST} route"}
+{"ts":"2026-11-27T17:32:34.938Z","level":"log","service":"api","msg":"Mapped {/api/v1/auth/login, POST} route"}
+{"ts":"2026-11-27T17:32:34.938Z","level":"log","service":"api","msg":"Mapped {/api/v1/auth/refresh, POST} route"}
+{"ts":"2026-11-27T17:32:34.938Z","level":"log","service":"api","msg":"Mapped {/api/v1/auth/accept-invite, POST} route"}
+{"ts":"2026-11-27T17:32:34.939Z","level":"log","service":"api","msg":"Mapped {/api/v1/auth/invite, POST} route"}
+{"ts":"2026-11-27T17:32:34.939Z","level":"log","service":"api","msg":"Mapped {/api/v1/auth/me, GET} route"}
+{"ts":"2026-11-27T17:32:34.939Z","level":"log","service":"api","msg":"CompaniesController {/api/v1/company}:"}
+{"ts":"2026-11-27T17:32:34.940Z","level":"log","service":"api","msg":"Mapped {/api/v1/company, GET} route"}
+{"ts":"2026-11-27T17:32:34.940Z","level":"log","service":"api","msg":"UsersController {/api/v1/users}:"}
+{"ts":"2026-11-27T17:32:34.940Z","level":"log","service":"api","msg":"Mapped {/api/v1/users, GET} route"}
+{"ts":"2026-11-27T17:32:34.940Z","level":"log","service":"api","msg":"CustomersController {/api/v1/customers}:"}
+{"ts":"2026-11-27T17:32:34.940Z","level":"log","service":"api","msg":"Mapped {/api/v1/customers, POST} route"}
+{"ts":"2026-11-27T17:32:34.941Z","level":"log","service":"api","msg":"Mapped {/api/v1/customers, GET} route"}
+{"ts":"2026-11-27T17:32:34.941Z","level":"log","service":"api","msg":"Mapped {/api/v1/customers/:id, GET} route"}
+{"ts":"2026-11-27T17:32:34.942Z","level":"log","service":"api","msg":"Mapped {/api/v1/customers/:id, PATCH} route"}
+{"ts":"2026-11-27T17:32:34.942Z","level":"log","service":"api","msg":"Mapped {/api/v1/customers/:id, DELETE} route"}
+{"ts":"2026-11-27T17:32:34.942Z","level":"log","service":"api","msg":"QuotesController {/api/v1/quotes}:"}
+{"ts":"2026-11-27T17:32:34.942Z","level":"log","service":"api","msg":"Mapped {/api/v1/quotes, POST} route"}
+{"ts":"2026-11-27T17:32:34.943Z","level":"log","service":"api","msg":"Mapped {/api/v1/quotes, GET} route"}
+{"ts":"2026-11-27T17:32:34.943Z","level":"log","service":"api","msg":"Mapped {/api/v1/quotes/:id, GET} route"}
+{"ts":"2026-11-27T17:32:34.943Z","level":"log","service":"api","msg":"Mapped {/api/v1/quotes/:id/send, POST} route"}
+{"ts":"2026-11-27T17:32:34.943Z","level":"log","service":"api","msg":"PublicQuotesController {/api/v1/public/quotes}:"}
+{"ts":"2026-11-27T17:32:34.944Z","level":"log","service":"api","msg":"Mapped {/api/v1/public/quotes/:token, GET} route"}
+{"ts":"2026-11-27T17:32:34.944Z","level":"log","service":"api","msg":"Mapped {/api/v1/public/quotes/:token/accept, POST} route"}
+{"ts":"2026-11-27T17:32:34.944Z","level":"log","service":"api","msg":"JobsController {/api/v1/jobs}:"}
+{"ts":"2026-11-27T17:32:34.944Z","level":"log","service":"api","msg":"Mapped {/api/v1/jobs, GET} route"}
+{"ts":"2026-11-27T17:32:34.945Z","level":"log","service":"api","msg":"Mapped {/api/v1/jobs/:id, GET} route"}
+{"ts":"2026-11-27T17:32:34.945Z","level":"log","service":"api","msg":"Mapped {/api/v1/jobs/:id/schedule, PATCH} route"}
+{"ts":"2026-11-27T17:32:34.945Z","level":"log","service":"api","msg":"Mapped {/api/v1/jobs/:id/checkin, POST} route"}
+{"ts":"2026-11-27T17:32:34.945Z","level":"log","service":"api","msg":"Mapped {/api/v1/jobs/:id/complete, POST} route"}
+{"ts":"2026-11-27T17:32:34.945Z","level":"log","service":"api","msg":"UploadsController {/api/v1/uploads}:"}
+{"ts":"2026-11-27T17:32:34.945Z","level":"log","service":"api","msg":"Mapped {/api/v1/uploads/presign, POST} route"}
+{"ts":"2026-11-27T17:32:34.946Z","level":"log","service":"api","msg":"InvoicesController {/api/v1/invoices}:"}
+{"ts":"2026-11-27T17:32:34.946Z","level":"log","service":"api","msg":"Mapped {/api/v1/invoices, GET} route"}
+{"ts":"2026-11-27T17:32:34.946Z","level":"log","service":"api","msg":"Mapped {/api/v1/invoices/:id, GET} route"}
+{"ts":"2026-11-27T17:32:34.946Z","level":"log","service":"api","msg":"Mapped {/api/v1/invoices/:id/download, GET} route"}
+{"ts":"2026-11-27T17:32:34.946Z","level":"log","service":"api","msg":"DashboardController {/api/v1/dashboard}:"}
+{"ts":"2026-11-27T17:32:34.946Z","level":"log","service":"api","msg":"Mapped {/api/v1/dashboard/kpis, GET} route"}
+{"ts":"2026-11-27T17:32:34.947Z","level":"log","service":"api","msg":"InternalController {/api/v1/internal/photos}:"}
+{"ts":"2026-11-27T17:32:34.947Z","level":"log","service":"api","msg":"Mapped {/api/v1/internal/photos/thumbnail-ready, POST} route"}
+{"ts":"2026-11-27T17:32:34.947Z","level":"log","service":"api","msg":"HealthController {/api/v1}:"}
+{"ts":"2026-11-27T17:32:34.947Z","level":"log","service":"api","msg":"Mapped {/healthz, GET} route"}
+{"ts":"2026-11-27T17:32:34.960Z","level":"log","service":"api","msg":"Nest application successfully started"}
+{"ts":"2026-11-27T17:32:34.977Z","level":"log","service":"api","msg":"api listening on 4000"}
+{"ts":"2026-11-27T17:32:35.475Z","level":"log","service":"api","requestId":"89ee3074-9a0a-445f-80aa-21a1f879f975","msg":"request","method":"GET","path":"/healthz","status":200,"ms":2}
+{"ts":"2026-11-27T17:32:36.517Z","level":"log","service":"api","requestId":"f947de7b-2047-4272-bd83-5d00828c612c","msg":"request","method":"POST","path":"/api/v1/internal/photos/thumbnail-ready","status":200,"ms":56}
+{"ts":"2026-11-27T17:32:36.588Z","level":"log","service":"api","requestId":"c2443313-70ea-4042-930d-b68c0fc74d6b","msg":"request","method":"POST","path":"/api/v1/internal/photos/thumbnail-ready","status":200,"ms":7}
+{"ts":"2026-11-27T17:32:36.654Z","level":"log","service":"api","requestId":"355fd7cf-104c-4ad0-b5a3-c83e3aec28b0","msg":"request","method":"POST","path":"/api/v1/internal/photos/thumbnail-ready","status":200,"ms":8}
+{"ts":"2026-11-27T17:32:36.723Z","level":"log","service":"api","requestId":"f0275d5d-e092-48f9-8a92-0c8a02108517","msg":"request","method":"POST","path":"/api/v1/internal/photos/thumbnail-ready","status":200,"ms":10}
+{"ts":"2026-11-27T17:32:36.801Z","level":"log","service":"api","requestId":"153dec7d-a8c5-4344-b016-498c4fe243b6","msg":"request","method":"POST","path":"/api/v1/internal/photos/thumbnail-ready","status":200,"ms":12}
+{"ts":"2026-11-27T17:32:36.884Z","level":"log","service":"api","requestId":"1e5e0126-8335-48ae-8106-c6d424d4750d","msg":"request","method":"POST","path":"/api/v1/internal/photos/thumbnail-ready","status":200,"ms":8}
+{"ts":"2026-11-27T17:32:36.995Z","level":"log","service":"api","requestId":"c47f8f5e-b461-497c-965c-696123a1007a","msg":"request","method":"POST","path":"/api/v1/internal/photos/thumbnail-ready","status":200,"ms":21}
+{"ts":"2026-11-27T17:32:37.073Z","level":"log","service":"api","requestId":"26060eb0-f362-43fd-ac94-6772c98e3852","msg":"request","method":"POST","path":"/api/v1/internal/photos/thumbnail-ready","status":200,"ms":7}
+{"ts":"2026-11-27T17:32:42.693Z","level":"log","service":"api","requestId":"59663494-7d2b-43b6-b03a-4dcfd2ba0d98","msg":"request","method":"POST","path":"/api/v1/auth/signup","status":201,"ms":203}
+{"ts":"2026-11-27T17:32:42.899Z","level":"log","service":"api","requestId":"2aaceb4d-c3c1-47ef-891e-0fedb337c182","companyId":"bd4a3e3d-022c-45df-868c-ef3ab087b94a","msg":"request","method":"GET","path":"/api/v1/dashboard/kpis","status":200,"ms":18}
+{"ts":"2026-11-27T17:32:43.199Z","level":"log","service":"api","requestId":"bfd8965e-ecb4-4a9b-91c6-6921fd10048f","companyId":"bd4a3e3d-022c-45df-868c-ef3ab087b94a","msg":"request","method":"GET","path":"/api/v1/users","status":200,"ms":6}
+{"ts":"2026-11-27T17:32:43.330Z","level":"log","service":"api","requestId":"87d2ce95-5240-47da-a0c3-b0c81fbbaf09","companyId":"bd4a3e3d-022c-45df-868c-ef3ab087b94a","msg":"request","method":"POST","path":"/api/v1/auth/invite","status":201,"ms":11}
+{"ts":"2026-11-27T17:32:43.350Z","level":"log","service":"api","requestId":"6fd1aa68-684d-4ea8-a379-f9542629f04b","companyId":"bd4a3e3d-022c-45df-868c-ef3ab087b94a","msg":"request","method":"GET","path":"/api/v1/users","status":200,"ms":5}
+{"ts":"2026-11-27T17:32:43.479Z","level":"log","service":"api","requestId":"7391733f-e111-45ca-ba88-3a19091d5ca5","companyId":"bd4a3e3d-022c-45df-868c-ef3ab087b94a","msg":"request","method":"GET","path":"/api/v1/customers","status":200,"ms":5}
+{"ts":"2026-11-27T17:32:43.593Z","level":"log","service":"api","requestId":"318c2b9d-a829-4d87-9360-d8167a2771e0","companyId":"bd4a3e3d-022c-45df-868c-ef3ab087b94a","msg":"request","method":"POST","path":"/api/v1/customers","status":201,"ms":7}
+{"ts":"2026-11-27T17:32:43.621Z","level":"log","service":"api","requestId":"01dfda90-c25e-4d2b-8937-74d787eec351","companyId":"bd4a3e3d-022c-45df-868c-ef3ab087b94a","msg":"request","method":"GET","path":"/api/v1/customers","status":200,"ms":4}
+{"ts":"2026-11-27T17:32:43.778Z","level":"log","service":"api","requestId":"6fa31e94-4d9b-4c1f-990f-2e2ddf5fad6d","companyId":"bd4a3e3d-022c-45df-868c-ef3ab087b94a","msg":"request","method":"GET","path":"/api/v1/customers","status":200,"ms":10}
+{"ts":"2026-11-27T17:32:44.181Z","level":"log","service":"api","requestId":"6fec3c5b-7585-4bd0-8fb2-89ac79ec0a3d","companyId":"bd4a3e3d-022c-45df-868c-ef3ab087b94a","msg":"request","method":"POST","path":"/api/v1/quotes","status":201,"ms":31}
+{"ts":"2026-11-27T17:32:44.285Z","level":"log","service":"api","requestId":"eb8b92fe-ddad-48e7-9fa1-71ef56101faf","companyId":"bd4a3e3d-022c-45df-868c-ef3ab087b94a","msg":"request","method":"GET","path":"/api/v1/quotes/47f673ec-a09a-4c62-ac04-34062e55daaf","status":200,"ms":7}
+{"ts":"2026-11-27T17:32:44.416Z","level":"log","service":"api","requestId":"f68fc575-2328-4538-9c97-6c39b277edb5","companyId":"bd4a3e3d-022c-45df-868c-ef3ab087b94a","msg":"request","method":"POST","path":"/api/v1/quotes/47f673ec-a09a-4c62-ac04-34062e55daaf/send","status":200,"ms":19}
+{"ts":"2026-11-27T17:32:44.433Z","level":"log","service":"api","requestId":"eb710f88-83eb-4080-ae1a-8f7881cda784","companyId":"bd4a3e3d-022c-45df-868c-ef3ab087b94a","msg":"request","method":"GET","path":"/api/v1/quotes/47f673ec-a09a-4c62-ac04-34062e55daaf","status":200,"ms":5}
+{"ts":"2026-11-27T17:32:44.686Z","level":"log","service":"api","requestId":"0c93ecc6-f498-4318-8fbb-7deb6935d728","msg":"request","method":"GET","path":"/api/v1/public/quotes/b9263c82-0edc-47e8-b5cf-65468a1581b9","status":200,"ms":9}
+{"ts":"2026-11-27T17:32:45.162Z","level":"log","service":"api","requestId":"0c84c1da-c26b-461e-8915-583461196f77","msg":"request","method":"POST","path":"/api/v1/public/quotes/b9263c82-0edc-47e8-b5cf-65468a1581b9/accept","status":200,"ms":27}
+{"ts":"2026-11-27T17:32:45.188Z","level":"log","service":"api","requestId":"fdecd2f1-1721-4c8b-a4a3-6f239ceb677d","msg":"request","method":"GET","path":"/api/v1/public/quotes/b9263c82-0edc-47e8-b5cf-65468a1581b9","status":200,"ms":9}
+{"ts":"2026-11-27T17:32:45.426Z","level":"log","service":"api","requestId":"ae44a381-983e-4ab2-92fa-ffe260d26dd4","companyId":"bd4a3e3d-022c-45df-868c-ef3ab087b94a","msg":"request","method":"GET","path":"/api/v1/jobs","status":200,"ms":11}
+{"ts":"2026-11-27T17:32:45.464Z","level":"log","service":"api","requestId":"62e8527a-9dbc-4a1a-bca7-035fc9ebb8d2","companyId":"bd4a3e3d-022c-45df-868c-ef3ab087b94a","msg":"request","method":"GET","path":"/api/v1/users?role=field","status":200,"ms":47}
+{"ts":"2026-11-27T17:32:45.786Z","level":"log","service":"api","requestId":"c774b316-5ccf-4178-8211-3f703da55770","companyId":"bd4a3e3d-022c-45df-868c-ef3ab087b94a","msg":"request","method":"PATCH","path":"/api/v1/jobs/c62a42df-ab2d-40a9-aad1-33881c4205b0/schedule","status":200,"ms":28}
+{"ts":"2026-11-27T17:32:45.807Z","level":"log","service":"api","requestId":"9ab8254d-7f7e-4f5c-888e-19c9c94d424f","companyId":"bd4a3e3d-022c-45df-868c-ef3ab087b94a","msg":"request","method":"GET","path":"/api/v1/jobs","status":200,"ms":10}
+{"ts":"2026-11-27T17:32:50.715Z","level":"log","service":"api","requestId":"401c97aa-9de6-4241-a7d2-a0bc30be43fa","msg":"request","method":"POST","path":"/api/v1/auth/signup","status":201,"ms":157}
+{"ts":"2026-11-27T17:32:50.746Z","level":"log","service":"api","requestId":"e3bb54c4-9782-4ba1-ba4c-65b4e7168e68","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"POST","path":"/api/v1/auth/invite","status":201,"ms":8}
+{"ts":"2026-11-27T17:32:50.904Z","level":"log","service":"api","requestId":"db92ec6e-fcd7-457b-afa1-6ce7226384fc","msg":"request","method":"POST","path":"/api/v1/auth/accept-invite","status":200,"ms":153}
+{"ts":"2026-11-27T17:32:50.914Z","level":"log","service":"api","requestId":"39a62522-c6dd-4125-8133-7abcfe49922f","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"POST","path":"/api/v1/customers","status":201,"ms":5}
+{"ts":"2026-11-27T17:32:50.939Z","level":"log","service":"api","requestId":"efc87b6b-c997-47ee-a3c6-8b1c1abfb1b8","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"POST","path":"/api/v1/quotes","status":201,"ms":21}
+{"ts":"2026-11-27T17:32:50.964Z","level":"log","service":"api","requestId":"336b4911-924c-47f4-b375-29674bdd5a31","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"POST","path":"/api/v1/quotes/521a2d02-7b9c-4695-8f1f-59c2bdc62c84/send","status":200,"ms":21}
+{"ts":"2026-11-27T17:32:50.995Z","level":"log","service":"api","requestId":"998f4239-c834-45a6-9fbb-fb5a1d03289a","msg":"request","method":"POST","path":"/api/v1/public/quotes/2245325a-9b1c-4592-b96e-503f92279a5e/accept","status":200,"ms":27}
+{"ts":"2026-11-27T17:32:51.005Z","level":"log","service":"api","requestId":"ad642d33-b63b-4c68-aead-15b1d80f52cc","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"GET","path":"/api/v1/jobs","status":200,"ms":6}
+{"ts":"2026-11-27T17:32:51.023Z","level":"log","service":"api","requestId":"2593b12e-0c53-4f7e-85bd-0739f74b1807","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"PATCH","path":"/api/v1/jobs/34119ad3-164b-417d-8314-3f4b1df5553f/schedule","status":200,"ms":14}
+{"ts":"2026-11-27T17:32:51.589Z","level":"log","service":"api","requestId":"70a9e255-7a02-45e7-9051-9769b59a6019","msg":"request","method":"POST","path":"/api/v1/auth/login","status":200,"ms":145}
+{"ts":"2026-11-27T17:32:51.623Z","level":"log","service":"api","requestId":"3e20a85a-d412-4c18-a611-e7d2eae80909","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"GET","path":"/api/v1/jobs?from=2026-11-27T17%3A00%3A00.000Z&to=2026-11-28T17%3A00%3A00.000Z","status":200,"ms":10}
+{"ts":"2026-11-27T17:32:51.898Z","level":"log","service":"api","requestId":"570e71f9-0e9c-4fb6-a169-642602862158","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"GET","path":"/api/v1/jobs/34119ad3-164b-417d-8314-3f4b1df5553f","status":200,"ms":11}
+{"ts":"2026-11-27T17:32:52.060Z","level":"log","service":"api","requestId":"bcf23749-f95f-411e-8a05-67e944f76708","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"POST","path":"/api/v1/jobs/34119ad3-164b-417d-8314-3f4b1df5553f/checkin","status":200,"ms":15}
+{"ts":"2026-11-27T17:32:52.074Z","level":"log","service":"api","requestId":"dc486475-326f-4e22-bc2e-dc79af15062f","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"GET","path":"/api/v1/jobs/34119ad3-164b-417d-8314-3f4b1df5553f","status":200,"ms":8}
+{"ts":"2026-11-27T17:32:52.240Z","level":"log","service":"api","requestId":"af3e995d-6e89-4daa-9881-a5e09594f1fb","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"POST","path":"/api/v1/uploads/presign","status":200,"ms":56}
+{"ts":"2026-11-27T17:32:52.290Z","level":"log","service":"api","requestId":"ba5ff782-b524-49ce-87c6-d526f1741954","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"POST","path":"/api/v1/uploads/presign","status":200,"ms":15}
+{"ts":"2026-11-27T17:32:52.515Z","level":"log","service":"api","requestId":"3665aabc-3c10-47aa-84c8-7eb31f0f79d7","msg":"request","method":"POST","path":"/api/v1/internal/photos/thumbnail-ready","status":200,"ms":49}
+{"ts":"2026-11-27T17:32:52.562Z","level":"log","service":"api","requestId":"e62fa998-3640-434a-90f6-18a874c180a1","msg":"request","method":"POST","path":"/api/v1/internal/photos/thumbnail-ready","status":200,"ms":7}
+{"ts":"2026-11-27T17:32:52.601Z","level":"log","service":"api","requestId":"5073855e-0ed4-4122-bacb-00843cf3a64f","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"POST","path":"/api/v1/jobs/34119ad3-164b-417d-8314-3f4b1df5553f/complete","status":200,"ms":35}
+{"ts":"2026-11-27T17:32:52.661Z","level":"log","service":"api","requestId":"bbff151b-c545-474e-bfb5-a72c3bf97598","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"GET","path":"/api/v1/jobs/34119ad3-164b-417d-8314-3f4b1df5553f","status":200,"ms":55}
+{"ts":"2026-11-27T17:32:57.935Z","level":"log","service":"api","requestId":"e9b3c79f-7325-44d4-be69-7998a4650d9b","msg":"request","method":"POST","path":"/api/v1/auth/login","status":200,"ms":138}
+{"ts":"2026-11-27T17:32:58.215Z","level":"log","service":"api","requestId":"3189cf1c-366d-4b85-8035-73f3be709319","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"GET","path":"/api/v1/jobs/34119ad3-164b-417d-8314-3f4b1df5553f","status":200,"ms":45}
+{"ts":"2026-11-27T17:32:58.693Z","level":"log","service":"api","requestId":"bb2050a9-7bd6-4f42-902c-481521cfa5fd","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"GET","path":"/api/v1/invoices/4634d370-064f-4ad7-b836-0415b3de9d6b","status":200,"ms":5}
+{"ts":"2026-11-27T17:32:58.787Z","level":"log","service":"api","requestId":"52a7b52d-20f4-4538-83cb-abe94be908b5","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"GET","path":"/api/v1/invoices/4634d370-064f-4ad7-b836-0415b3de9d6b/download","status":200,"ms":11}
+{"ts":"2026-11-27T17:33:00.840Z","level":"log","service":"api","requestId":"33b29c85-aed8-4bba-b8b3-b953d3fa6d1b","companyId":"ddab48d3-573c-448d-bddf-b319d1691a11","msg":"request","method":"GET","path":"/api/v1/dashboard/kpis","status":200,"ms":2}
+{"ts":"2026-11-27T17:33:05.234Z","level":"log","service":"api","requestId":"0b29b020-9531-4db7-bd30-f5d785dfc4fb","msg":"request","method":"POST","path":"/api/v1/auth/signup","status":201,"ms":185}
+{"ts":"2026-11-27T17:33:05.279Z","level":"log","service":"api","requestId":"c9973703-9b05-47de-a693-417abcb72c8e","companyId":"e96f5fe9-68a5-4db0-9962-f86601e1e122","msg":"request","method":"POST","path":"/api/v1/auth/invite","status":201,"ms":6}
+{"ts":"2026-11-27T17:33:05.403Z","level":"log","service":"api","requestId":"f59194b3-e118-4550-ac72-d6ea1936426e","msg":"request","method":"POST","path":"/api/v1/auth/accept-invite","status":200,"ms":120}
+{"ts":"2026-11-27T17:33:05.412Z","level":"log","service":"api","requestId":"3038e0eb-0bdc-42ab-9276-b4fc878333a3","companyId":"e96f5fe9-68a5-4db0-9962-f86601e1e122","msg":"request","method":"POST","path":"/api/v1/customers","status":201,"ms":5}
+{"ts":"2026-11-27T17:33:05.432Z","level":"log","service":"api","requestId":"7bf83956-f1ff-48b2-849a-ca1767bd3a74","companyId":"e96f5fe9-68a5-4db0-9962-f86601e1e122","msg":"request","method":"POST","path":"/api/v1/quotes","status":201,"ms":16}
+{"ts":"2026-11-27T17:33:05.454Z","level":"log","service":"api","requestId":"669379a7-0f9c-408c-923a-80cbbd3f68f1","companyId":"e96f5fe9-68a5-4db0-9962-f86601e1e122","msg":"request","method":"POST","path":"/api/v1/quotes/6cd34675-03b7-4988-b3f8-e4d020025dfc/send","status":200,"ms":18}
+{"ts":"2026-11-27T17:33:05.480Z","level":"log","service":"api","requestId":"d7e2b166-714f-43ae-8bb9-d05c647cd8e7","msg":"request","method":"POST","path":"/api/v1/public/quotes/faaa4366-253a-4cc8-ae04-5ee0da090bdf/accept","status":200,"ms":23}
+{"ts":"2026-11-27T17:33:05.491Z","level":"log","service":"api","requestId":"02137e6c-d1bb-48d4-ae02-bbbee4a667c3","companyId":"e96f5fe9-68a5-4db0-9962-f86601e1e122","msg":"request","method":"GET","path":"/api/v1/jobs","status":200,"ms":7}
+{"ts":"2026-11-27T17:33:05.513Z","level":"log","service":"api","requestId":"f1162a77-ce8a-4884-be6a-f66c464cc5e6","companyId":"e96f5fe9-68a5-4db0-9962-f86601e1e122","msg":"request","method":"PATCH","path":"/api/v1/jobs/4d53ffef-3608-4376-a65b-78f6ae3a5d5f/schedule","status":200,"ms":16}
+{"ts":"2026-11-27T17:33:05.543Z","level":"log","service":"api","requestId":"trace-mwz9f5st","companyId":"e96f5fe9-68a5-4db0-9962-f86601e1e122","msg":"request","method":"POST","path":"/api/v1/jobs/4d53ffef-3608-4376-a65b-78f6ae3a5d5f/complete","status":200,"ms":26}

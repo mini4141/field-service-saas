@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="1" failures="0" errors="0" time="0.1005502">
+    <testsuite name="src/components/QuoteEditor.test.tsx" timestamp="2026-11-27T17:35:02.261Z" hostname="DESKTOP-LSTSC86" tests="1" failures="0" errors="0" skipped="0" time="0.1005502">
+        <testcase classname="src/components/QuoteEditor.test.tsx" name="QuoteEditor &gt; renders the computed total for the line items" time="0.0991176">
+        </testcase>
+    </testsuite>
+</testsuites>

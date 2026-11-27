@@ -3,5 +3,5 @@ module.exports = {
   testEnvironment: "node",
   rootDir: "src",
   testRegex: ".*\\.spec\\.ts$",
-  reporters: ["default", ["jest-junit", { outputDirectory: "../reports", outputName: "unit-junit.xml" }]],
+  reporters: ["default", ["jest-junit", { outputDirectory: "reports", outputName: "worker-unit-junit.xml" }]],
 };

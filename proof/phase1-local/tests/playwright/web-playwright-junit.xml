@@ -1,0 +1,6 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="5.042732">
+<testsuite name="office-flow.spec.ts" timestamp="2026-11-27T17:36:09.324Z" hostname="" tests="1" failures="0" skipped="0" time="3.332" errors="0">
+<testcase name="office flow: signup -&gt; invite -&gt; customer -&gt; quote -&gt; public accept -&gt; schedule" classname="office-flow.spec.ts" time="3.332">
+</testcase>
+</testsuite>
+</testsuites>

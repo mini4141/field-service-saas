@@ -1,0 +1,123 @@
+
+   • turbo 2.11.13
+   • Packages in scope: @fss/api, @fss/api-client, @fss/config, @fss/mobile, @fss/shared, @fss/thumbnailer, @fss/ui, @fss/web, @fss/worker
+   • Running lint, typecheck, build in 9 packages
+   • Remote caching disabled
+
+@fss/ui:build: cache hit, replaying logs 5f40b7612842a2da
+@fss/ui:build: $ tsc -p tsconfig.json --noEmit
+@fss/api-client:build: cache hit, replaying logs 15c67c753b18d273
+@fss/api-client:build: $ tsc -p tsconfig.json --noEmit
+@fss/thumbnailer:lint: cache hit, replaying logs 41b7e1437f7d43f2
+@fss/ui:lint: cache hit, replaying logs 94c1b21339019f42
+@fss/api-client:typecheck: cache hit, replaying logs a8a4138ac33a2a11
+@fss/api-client:lint: cache hit, replaying logs 6bae6151e7c92ae0
+@fss/thumbnailer:lint: $ eslint src
+@fss/ui:lint: $ eslint src
+@fss/thumbnailer:build: cache miss, executing f24fbe918b1dd07b
+@fss/api-client:typecheck: $ tsc -p tsconfig.json --noEmit
+@fss/api-client:lint: $ eslint src
+@fss/shared:build: cache hit, replaying logs 5c3e208ff3b22015
+@fss/shared:typecheck: cache hit, replaying logs 0545ccd8a963a833
+@fss/shared:build: $ prisma generate --schema ../../prisma/schema.prisma && tsc -p tsconfig.json
+@fss/shared:build: Prisma schema loaded from ..\..\prisma\schema.prisma
+@fss/shared:build: 
+@fss/shared:build: ✔ Generated Prisma Client (v6.19.3) to .\..\..\node_modules\@prisma\client in 605ms
+@fss/shared:build: 
+@fss/shared:build: Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+@fss/shared:build: 
+@fss/shared:build: Tip: Want to turn off tips and other hints? https://pris.ly/tip-4-nohints
+@fss/shared:build: 
+@fss/shared:typecheck: $ tsc -p tsconfig.json --noEmit
+@fss/ui:typecheck: cache hit, replaying logs 82897bcef830f90b
+@fss/ui:typecheck: $ tsc -p tsconfig.json --noEmit
+@fss/thumbnailer:typecheck: cache hit, replaying logs d2120eabe2c2f9c1
+@fss/thumbnailer:typecheck: $ tsc -p tsconfig.json --noEmit
+@fss/shared:lint: cache hit, replaying logs 6223013d694c4ff7
+@fss/shared:lint: $ eslint src
+@fss/mobile:lint: cache miss, executing 2774cc40377ee78f
+@fss/mobile:build: cache miss, executing 661d0a915813f650
+@fss/mobile:typecheck: cache miss, executing 6f571d678bbf8068
+@fss/api:typecheck: cache miss, executing f30acabf35ce13c7
+@fss/api:build: cache hit, replaying logs e3e66e67305f8ddc
+@fss/api:build: $ nest build && pnpm run build:openapi
+@fss/api:build: $ node dist/openapi.js
+@fss/thumbnailer:build: $ tsc -p tsconfig.json --noEmit
+@fss/web:typecheck: cache miss, executing ef196daa9afac2fe
+@fss/worker:build: cache hit, replaying logs 1982ead11c8da46a
+@fss/worker:build: $ nest build
+@fss/api:lint: cache miss, executing e5963308612c26cf
+@fss/mobile:lint: $ eslint src e2e
+@fss/mobile:build: $ expo export --platform web
+@fss/web:lint: cache miss, executing 9930fe36fc8cd58f
+@fss/worker:lint: cache hit, replaying logs 5e8a21b8328ed93e
+@fss/worker:lint: $ eslint src
+@fss/worker:typecheck: cache hit, replaying logs 4a1ca768c7bc124d
+@fss/worker:typecheck: $ tsc -p tsconfig.json --noEmit
+@fss/mobile:typecheck: $ tsc -p tsconfig.json --noEmit
+@fss/api:typecheck: $ tsc -p tsconfig.json --noEmit
+@fss/web:typecheck: $ tsc -p tsconfig.json --noEmit
+@fss/api:lint: $ eslint src test
+@fss/web:lint: $ eslint src e2e
+@fss/web:build: cache hit, replaying logs a81c21defbf73a2c
+@fss/web:build: $ next build
+@fss/web:build:    ▲ Next.js 15.5.29
+@fss/web:build: 
+@fss/web:build:    Creating an optimized production build ...
+@fss/web:build:  ✓ Compiled successfully in 30.2s
+@fss/web:build:    Skipping linting
+@fss/web:build:    Checking validity of types ...
+@fss/web:build:    Collecting page data ...
+@fss/web:build:    Generating static pages (0/15) ...
+@fss/web:build:    Generating static pages (3/15) 
+@fss/web:build:    Generating static pages (7/15) 
+@fss/web:build:    Generating static pages (11/15) 
+@fss/web:build:  ✓ Generating static pages (15/15)
+@fss/web:build:    Finalizing page optimization ...
+@fss/web:build:    Collecting build traces ...
+@fss/web:build: 
+@fss/web:build: Route (app)                                 Size  First Load JS
+@fss/web:build: ┌ ○ /                                    3.23 kB         106 kB
+@fss/web:build: ├ ○ /_not-found                            987 B         104 kB
+@fss/web:build: ├ ○ /accept-invite                       4.24 kB         107 kB
+@fss/web:build: ├ ○ /customers                            2.1 kB         118 kB
+@fss/web:build: ├ ○ /dashboard                           1.89 kB         115 kB
+@fss/web:build: ├ ○ /invoices                            1.83 kB         119 kB
+@fss/web:build: ├ ƒ /invoices/[id]                        2.1 kB         116 kB
+@fss/web:build: ├ ○ /jobs                                1.85 kB         119 kB
+@fss/web:build: ├ ƒ /jobs/[id]                           2.16 kB         119 kB
+@fss/web:build: ├ ○ /login                               4.28 kB         110 kB
+@fss/web:build: ├ ƒ /q/[token]                             122 B         103 kB
+@fss/web:build: ├ ○ /quotes                              1.86 kB         119 kB
+@fss/web:build: ├ ƒ /quotes/[id]                         2.13 kB         118 kB
+@fss/web:build: ├ ○ /quotes/new                          2.37 kB         116 kB
+@fss/web:build: ├ ○ /schedule                            2.68 kB         118 kB
+@fss/web:build: ├ ○ /signup                              4.34 kB         111 kB
+@fss/web:build: └ ○ /team                                2.14 kB         118 kB
+@fss/web:build: + First Load JS shared by all             103 kB
+@fss/web:build:   ├ chunks/18-68d7739dcfa59da4.js        46.6 kB
+@fss/web:build:   ├ chunks/87c73c54-24122e7b92478d00.js  54.2 kB
+@fss/web:build:   └ other shared chunks (total)          1.97 kB
+@fss/web:build: 
+@fss/web:build: 
+@fss/web:build: ○  (Static)   prerendered as static content
+@fss/web:build: ƒ  (Dynamic)  server-rendered on demand
+@fss/web:build: 
+@fss/mobile:build: Starting Metro Bundler
+@fss/mobile:build: Web apps\mobile\index.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+@fss/mobile:build: Web Bundled 982ms apps\mobile\index.js (193 modules)
+@fss/mobile:build: 
+@fss/mobile:build: › web bundles (1):
+@fss/mobile:build: _expo/static/js/web/index-394d7a7fe16de0a79c3040c72608314a.js (398 kB)
+@fss/mobile:build: 
+@fss/mobile:build: › Files (2):
+@fss/mobile:build: index.html (1.18 kB)
+@fss/mobile:build: metadata.json (49 B)
+@fss/mobile:build: 
+@fss/mobile:build: Exported: dist
+
+ Tasks:    24 successful, 24 total
+Cached:    16 cached, 24 total
+  Time:    30.824s 
+
+ WARNING  no output files found for task @fss/thumbnailer#build. Please check your `outputs` key in `turbo.json`

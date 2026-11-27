@@ -1,0 +1,16 @@
+**/node_modules
+**/dist
+**/.next
+**/.turbo
+**/.expo
+.git
+.local
+.env
+proof
+infra
+deploy
+docs
+apps/mobile/e2e
+apps/*/test-results
+apps/*/reports
+apps/thumbnailer/build

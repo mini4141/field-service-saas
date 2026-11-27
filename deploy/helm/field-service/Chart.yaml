@@ -1,0 +1,6 @@
+apiVersion: v2
+name: field-service
+description: api, worker and web for the field-service SaaS (optional in-cluster postgres/redis/moto for kind)
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
