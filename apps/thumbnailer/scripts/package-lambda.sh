@@ -8,5 +8,5 @@ rm -rf build && mkdir -p build
 SHARP_VERSION=$(node -p "require('../../node_modules/sharp/package.json').version")
 (cd build \
   && echo '{"name":"thumbnailer-lambda","private":true}' > package.json \
-  && npm install --omit=dev --no-audit --no-fund --os=linux --cpu=x64 "sharp@${SHARP_VERSION}" >/dev/null)
+  && npm install --omit=dev --no-audit --no-fund --os=linux --cpu=x64 --libc=glibc --include=optional "sharp@${SHARP_VERSION}" >/dev/null)
 echo "lambda bundle ready: apps/thumbnailer/build (sharp ${SHARP_VERSION}, linux-x64)"

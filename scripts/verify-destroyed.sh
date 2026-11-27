@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Phase 3 check. Exits non-zero if anything billable is still there. Output is redacted and saved by the caller.
 set -uo pipefail
+export MSYS_NO_PATHCONV=1
 export AWS_PROFILE=field-service-saas-deployer AWS_REGION=ap-southeast-2 AWS_DEFAULT_REGION=ap-southeast-2
 FAIL=0
 check() { # label, count-or-text (empty/0 = clean)

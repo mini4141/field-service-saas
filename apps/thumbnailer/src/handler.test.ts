@@ -1,7 +1,7 @@
 import { GetObjectCommand, PutObjectCommand } from "@aws-sdk/client-s3";
 import sharp from "sharp";
 import { describe, expect, it, vi } from "vitest";
-import { handler } from "./handler";
+import { processEvent } from "./handler";
 
 describe("thumbnailer handler", () => {
   it("resizes a fixture image to 320px, writes thumbs/ and calls the signed webhook", async () => {
@@ -18,7 +18,7 @@ describe("thumbnailer handler", () => {
     process.env.API_WEBHOOK_URL = "http://api.test";
 
     const event = { Records: [{ s3: { bucket: { name: "b" }, object: { key: "photos/co1/job1/a+photo.png" } } }] };
-    const out = await handler(event as never, { s3: s3 as never, fetch: fetchMock as never });
+    const out = await processEvent(event as never, { s3: s3 as never, fetch: fetchMock as never });
 
     expect(out).toEqual([{ key: "photos/co1/job1/a photo.png", thumbKey: "thumbs/co1/job1/a photo.png.jpg" }]);
     const meta = await sharp(puts[0].Body).metadata();

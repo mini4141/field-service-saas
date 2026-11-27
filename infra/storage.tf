@@ -119,6 +119,10 @@ resource "aws_cloudfront_origin_access_control" "mobile" {
   signing_protocol                  = "sigv4"
 }
 
+data "aws_cloudfront_cache_policy" "optimized" { name = "Managed-CachingOptimized" }
+data "aws_cloudfront_cache_policy" "disabled" { name = "Managed-CachingDisabled" }
+data "aws_cloudfront_origin_request_policy" "all_viewer_except_host" { name = "Managed-AllViewerExceptHostHeader" }
+
 locals {
   api_host = replace(replace(var.api_base_url, "http://", ""), "https://", "")
 }
@@ -151,7 +155,7 @@ resource "aws_cloudfront_distribution" "mobile" {
     viewer_protocol_policy = "redirect-to-https"
     allowed_methods        = ["GET", "HEAD"]
     cached_methods         = ["GET", "HEAD"]
-    cache_policy_id        = "658327ea-f89d-4fab-a63d-7e88639e58f6" # CachingOptimized
+    cache_policy_id        = data.aws_cloudfront_cache_policy.optimized.id
   }
   ordered_cache_behavior {
     path_pattern             = "/api/*"
@@ -159,8 +163,8 @@ resource "aws_cloudfront_distribution" "mobile" {
     viewer_protocol_policy   = "https-only"
     allowed_methods          = ["GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"]
     cached_methods           = ["GET", "HEAD"]
-    cache_policy_id          = "4135ea2d-6df8-4ea8-a2b4-9a6bc8e3b5c3" # CachingDisabled
-    origin_request_policy_id = "b689b0a8-53d0-40ab-baf2-68738e2966ac" # AllViewerExceptHostHeader
+    cache_policy_id          = data.aws_cloudfront_cache_policy.disabled.id
+    origin_request_policy_id = data.aws_cloudfront_origin_request_policy.all_viewer_except_host.id
   }
   custom_error_response {
     error_code         = 403

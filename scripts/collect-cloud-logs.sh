@@ -3,6 +3,7 @@
 set -euo pipefail
 source "$(dirname "$0")/lib.sh"
 cd "$ROOT"
+export MSYS_NO_PATHCONV=1
 export AWS_PROFILE=field-service-saas-deployer AWS_REGION=ap-southeast-2 AWS_DEFAULT_REGION=ap-southeast-2
 export KUBECONFIG="$LOCAL/kubeconfig-eks"
 TF="terraform -chdir=infra"
@@ -32,7 +33,8 @@ cat >"$LOCAL/widget.json" <<EOF
  "metrics":[["AWS/Lambda","Invocations","FunctionName","$FN",{"stat":"Sum","period":60}],["AWS/Lambda","Errors","FunctionName","$FN",{"stat":"Sum","period":60}]],
  "view":"timeSeries","region":"ap-southeast-2"}
 EOF
-aws cloudwatch get-metric-widget-image --metric-widget "$(cat "$LOCAL/widget.json")" --output text --query MetricWidgetImage | base64 -d >"$OUT/screenshots/05-cloudwatch-lambda.png" || true
+aws cloudwatch get-metric-widget-image --metric-widget "$(cat "$LOCAL/widget.json")" --output text --query MetricWidgetImage | tr -d "
+" | base64 -d >"$OUT/screenshots/05-cloudwatch-lambda.png" || true
 
 {
   echo "# Terraform-managed AWS resources"; $TF state list

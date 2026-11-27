@@ -11,7 +11,7 @@ echo "== dependencies + build"
 # Browser-facing URLs are baked into the web/mobile builds.
 export EXPO_PUBLIC_API_URL="${EXPO_PUBLIC_API_URL:-http://localhost:${API_PORT:-4000}}"
 pnpm turbo run build --filter=@fss/api --filter=@fss/worker --filter=@fss/web
-(cd apps/mobile && CI=1 pnpm exec expo export --platform web >"$LOCAL/logs/expo-export.log" 2>&1)
+(cd apps/mobile && CI=1 pnpm exec expo export --platform web --clear >"$LOCAL/logs/expo-export.log" 2>&1)
 
 echo "== compose"
 docker compose up -d --wait

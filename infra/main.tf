@@ -24,7 +24,7 @@ variable "name" {
 
 variable "eks_version" {
   type    = string
-  default = "1.33"
+  default = "1.35"
 }
 
 # Public URL of the Traefik NLB, e.g. http://xxxx.elb.ap-southeast-2.amazonaws.com.

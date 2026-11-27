@@ -1,0 +1,89 @@
+# Terraform-managed AWS resources
+data.archive_file.thumbnailer
+data.aws_availability_zones.available
+data.aws_caller_identity.current
+data.aws_cloudfront_cache_policy.disabled
+data.aws_cloudfront_cache_policy.optimized
+data.aws_cloudfront_origin_request_policy.all_viewer_except_host
+data.aws_iam_policy_document.eks_assume
+data.aws_iam_policy_document.lambda_assume
+data.aws_iam_policy_document.node_assume
+data.aws_iam_policy_document.pods_assume
+aws_cloudfront_distribution.mobile[0]
+aws_cloudfront_origin_access_control.mobile
+aws_cloudwatch_log_group.thumbnailer
+aws_db_instance.main
+aws_db_subnet_group.main
+aws_ecr_repository.app["api"]
+aws_ecr_repository.app["web"]
+aws_ecr_repository.app["worker"]
+aws_eks_addon.pod_identity
+aws_eks_cluster.main
+aws_eks_node_group.main
+aws_eks_pod_identity_association.app
+aws_elasticache_cluster.main
+aws_elasticache_subnet_group.main
+aws_iam_role.app
+aws_iam_role.cluster
+aws_iam_role.lambda
+aws_iam_role.node
+aws_iam_role_policy.app_s3
+aws_iam_role_policy.lambda
+aws_iam_role_policy_attachment.cluster
+aws_iam_role_policy_attachment.node["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"]
+aws_iam_role_policy_attachment.node["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"]
+aws_iam_role_policy_attachment.node["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"]
+aws_internet_gateway.main
+aws_lambda_function.thumbnailer
+aws_lambda_permission.s3
+aws_route_table.public
+aws_route_table_association.public[0]
+aws_route_table_association.public[1]
+aws_s3_bucket.assets
+aws_s3_bucket.mobile
+aws_s3_bucket_cors_configuration.assets
+aws_s3_bucket_notification.photos
+aws_s3_bucket_policy.mobile[0]
+aws_s3_bucket_public_access_block.assets
+aws_s3_bucket_public_access_block.mobile
+aws_security_group.data
+aws_subnet.public[0]
+aws_subnet.public[1]
+aws_vpc.main
+random_password.db
+random_password.hmac
+random_password.jwt
+
+# outputs (non-sensitive)
+assets_bucket = "field-service-saas-assets-<ACCOUNT_ID>"
+cloudfront_domain = "d3dc0ei2djjycr.cloudfront.net"
+cloudfront_id = "E36NDOC5W9BC9Y"
+cluster_name = "field-service-saas"
+ecr_registry = "<ACCOUNT_ID>.dkr.ecr.ap-southeast-2.amazonaws.com"
+lambda_name = "field-service-saas-thumbnailer"
+mobile_bucket = "field-service-saas-mobile-<ACCOUNT_ID>"
+rds_endpoint = "field-service-saas.cxggm4qswuct.ap-southeast-2.rds.amazonaws.com"
+redis_endpoint = "field-service-saas.z7jwub.0001.apse2.cache.amazonaws.com"
+
+# tagged resources
+arn:aws:ecr:ap-southeast-2:<ACCOUNT_ID>:repository/fss-web
+arn:aws:eks:ap-southeast-2:<ACCOUNT_ID>:podidentityassociation/field-service-saas/a-1w7igtqwnznejl26j
+arn:aws:elasticache:ap-southeast-2:<ACCOUNT_ID>:cluster:field-service-saas
+arn:aws:s3:::field-service-saas-assets-<ACCOUNT_ID>
+arn:aws:ec2:ap-southeast-2:<ACCOUNT_ID>:route-table/rtb-01a6faa69ff36ba90
+arn:aws:rds:ap-southeast-2:<ACCOUNT_ID>:subgrp:field-service-saas
+arn:aws:eks:ap-southeast-2:<ACCOUNT_ID>:addon/field-service-saas/eks-pod-identity-agent/22d10f12-da2f-a305-115e-2f9afb3a530c
+arn:aws:lambda:ap-southeast-2:<ACCOUNT_ID>:function:field-service-saas-thumbnailer
+arn:aws:s3:::field-service-saas-mobile-<ACCOUNT_ID>
+arn:aws:ec2:ap-southeast-2:<ACCOUNT_ID>:subnet/subnet-0a9734016c381475d
+arn:aws:ecr:ap-southeast-2:<ACCOUNT_ID>:repository/fss-api
+arn:aws:logs:ap-southeast-2:<ACCOUNT_ID>:log-group:/aws/lambda/field-service-saas-thumbnailer
+arn:aws:ec2:ap-southeast-2:<ACCOUNT_ID>:vpc/vpc-0318fc0e3ff3e8403
+arn:aws:ecr:ap-southeast-2:<ACCOUNT_ID>:repository/fss-worker
+arn:aws:ec2:ap-southeast-2:<ACCOUNT_ID>:security-group/sg-091f643321090e681
+arn:aws:rds:ap-southeast-2:<ACCOUNT_ID>:db:field-service-saas
+arn:aws:ec2:ap-southeast-2:<ACCOUNT_ID>:internet-gateway/igw-08334da8d69f3eeac
+arn:aws:ec2:ap-southeast-2:<ACCOUNT_ID>:subnet/subnet-04f1052ff8dc7235e
+arn:aws:eks:ap-southeast-2:<ACCOUNT_ID>:cluster/field-service-saas
+arn:aws:eks:ap-southeast-2:<ACCOUNT_ID>:nodegroup/field-service-saas/spot/6ad10f11-e551-828b-24aa-28e99efdddca
+arn:aws:elasticache:ap-southeast-2:<ACCOUNT_ID>:subnetgroup:field-service-saas

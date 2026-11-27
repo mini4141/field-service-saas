@@ -22,8 +22,8 @@ export function defaultDeps(): Deps {
 /** photos/<companyId>/<jobId>/<file> -> thumbs/<companyId>/<jobId>/<file>.jpg */
 export const thumbKeyFor = (key: string) => `thumbs/${key.slice("photos/".length)}.jpg`;
 
-/** Lambda entry point (S3 ObjectCreated under photos/). The local watcher calls this exact function. */
-export async function handler(event: S3Event, deps: Deps = defaultDeps()) {
+/** The thumbnail logic, with injectable dependencies (used by tests and the local watcher). */
+export async function processEvent(event: S3Event, deps: Deps) {
   const results: { key: string; thumbKey: string }[] = [];
   for (const record of event.Records) {
     const bucket = record.s3.bucket.name;
@@ -49,3 +49,6 @@ export async function handler(event: S3Event, deps: Deps = defaultDeps()) {
   }
   return results;
 }
+
+/** Lambda entry point (S3 ObjectCreated under photos/). Lambda passes (event, context): context must not be mistaken for deps. */
+export const handler = (event: S3Event) => processEvent(event, defaultDeps());

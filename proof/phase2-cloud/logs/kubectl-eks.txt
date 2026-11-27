@@ -1,0 +1,88 @@
+# EKS cluster
+---------------------------------------------
+|              DescribeCluster              |
++---------------------+---------+-----------+
+|        name         | status  |  version  |
++---------------------+---------+-----------+
+|  field-service-saas |  ACTIVE |  1.35     |
++---------------------+---------+-----------+
+
+# nodes (SPOT)
+NAME                                            STATUS   ROLES    AGE   VERSION               CAPACITYTYPE   INSTANCE-TYPE
+ip-10-0-0-150.ap-southeast-2.compute.internal   Ready    <none>   35m   v1.35.9-eks-9adbfea   SPOT           t3.medium
+ip-10-0-1-135.ap-southeast-2.compute.internal   Ready    <none>   35m   v1.35.9-eks-9adbfea   SPOT           t3.medium
+
+NAME                         READY   STATUS      RESTARTS   AGE
+pod/api-6b789c6c49-hkp6q     1/1     Running     0          18m
+pod/migrate-1-77rzj          0/1     Completed   0          18m
+pod/web-5b85977bcb-fmnbm     1/1     Running     0          18m
+pod/worker-6b4f85bcb-h8l8w   1/1     Running     0          18m
+
+NAME                 TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
+service/api          ClusterIP   172.20.253.253   <none>        4000/TCP   18m
+service/kubernetes   ClusterIP   172.20.0.1       <none>        443/TCP    38m
+service/web          ClusterIP   172.20.198.20    <none>        3000/TCP   18m
+service/worker       ClusterIP   172.20.44.152    <none>        4100/TCP   18m
+
+NAME                     READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/api      1/1     1            1           18m
+deployment.apps/web      1/1     1            1           18m
+deployment.apps/worker   1/1     1            1           18m
+
+NAME                               DESIRED   CURRENT   READY   AGE
+replicaset.apps/api-6b789c6c49     1         1         1       18m
+replicaset.apps/web-5b85977bcb     1         1         1       18m
+replicaset.apps/worker-6b4f85bcb   1         1         1       18m
+
+NAME                  STATUS     COMPLETIONS   DURATION   AGE
+job.batch/migrate-1   Complete   1/1           32s        18m
+
+NAME                            CLASS     HOSTS   ADDRESS                                                                              PORTS   AGE
+ingress.networking.k8s.io/fss   traefik   *       a32315173bf24460797ca9c8b9d61b09-4f01315afd2e900e.elb.ap-southeast-2.amazonaws.com   80      18m
+
+NAME      TYPE           CLUSTER-IP      EXTERNAL-IP                                                                          PORT(S)        AGE
+traefik   LoadBalancer   172.20.167.32   a32315173bf24460797ca9c8b9d61b09-4f01315afd2e900e.elb.ap-southeast-2.amazonaws.com   80:30848/TCP   25m
+
+# api logs
+{"ts":"2026-11-27T18:29:02.583Z","level":"log","service":"api","requestId":"a991bae2-6b99-4398-88f0-81d796efcaf4","msg":"request","method":"GET","path":"/healthz","status":200,"ms":0}
+{"ts":"2026-11-27T18:29:07.583Z","level":"log","service":"api","requestId":"baa2a837-e3de-4d35-a7de-a9573f1a0375","msg":"request","method":"GET","path":"/healthz","status":200,"ms":0}
+{"ts":"2026-11-27T18:29:12.583Z","level":"log","service":"api","requestId":"25f2a6ef-a70d-4fdf-8034-21659288c573","msg":"request","method":"GET","path":"/healthz","status":200,"ms":0}
+{"ts":"2026-11-27T18:29:16.733Z","level":"log","service":"api","requestId":"a2b2ecbe-7ba4-40a9-aad9-d81fdda0d5c3","msg":"request","method":"GET","path":"/healthz","status":200,"ms":1}
+{"ts":"2026-11-27T18:29:17.584Z","level":"log","service":"api","requestId":"bfaa5025-24e4-4a47-bde6-c489d7cb4ca5","msg":"request","method":"GET","path":"/healthz","status":200,"ms":0}
+{"ts":"2026-11-27T18:29:22.584Z","level":"log","service":"api","requestId":"d247a507-89ea-40e0-bd4d-c1299ecc5857","msg":"request","method":"GET","path":"/healthz","status":200,"ms":0}
+{"ts":"2026-11-27T18:29:27.583Z","level":"log","service":"api","requestId":"cda2ee99-0391-4936-9912-ba1147f19751","msg":"request","method":"GET","path":"/healthz","status":200,"ms":0}
+{"ts":"2026-11-27T18:29:31.732Z","level":"log","service":"api","requestId":"5f70b882-8faf-4bd6-9d98-039e499239ce","msg":"request","method":"GET","path":"/healthz","status":200,"ms":0}
+{"ts":"2026-11-27T18:29:32.583Z","level":"log","service":"api","requestId":"6b130284-7d71-47b8-ab5b-37318a1f0012","msg":"request","method":"GET","path":"/healthz","status":200,"ms":0}
+{"ts":"2026-11-27T18:29:37.583Z","level":"log","service":"api","requestId":"aa1dcf39-4d9a-49e5-8b77-828aa1194a00","msg":"request","method":"GET","path":"/healthz","status":200,"ms":0}
+{"ts":"2026-11-27T18:29:42.584Z","level":"log","service":"api","requestId":"45578b23-da0a-41c2-bba5-6107b92f54d8","msg":"request","method":"GET","path":"/healthz","status":200,"ms":1}
+{"ts":"2026-11-27T18:29:46.732Z","level":"log","service":"api","requestId":"26bca400-baf8-47ec-866c-9102b0172973","msg":"request","method":"GET","path":"/healthz","status":200,"ms":0}
+{"ts":"2026-11-27T18:29:47.583Z","level":"log","service":"api","requestId":"8f68f2a6-53b1-4039-af87-4fbe0e073d67","msg":"request","method":"GET","path":"/healthz","status":200,"ms":0}
+{"ts":"2026-11-27T18:29:52.583Z","level":"log","service":"api","requestId":"a0cf91a1-421c-4b5e-afd5-9d6919f2167a","msg":"request","method":"GET","path":"/healthz","status":200,"ms":0}
+{"ts":"2026-11-27T18:29:57.583Z","level":"log","service":"api","requestId":"21129d2e-3345-4cf2-b743-80751d8926f7","msg":"request","method":"GET","path":"/healthz","status":200,"ms":0}
+
+# worker logs
+{"ts":"2026-11-27T18:20:54.824Z","level":"log","service":"worker","msg":"kpis refreshed","companies":6}
+{"ts":"2026-11-27T18:21:08.452Z","level":"log","service":"worker","requestId":"bc85a50d-2d99-4ac0-9077-b5e8fb476801","companyId":"d264aad6-615e-4a8c-bb27-a5ac0940938b","msg":"invoice pdf uploaded","invoiceId":"96c7ad1e-d20d-4fa0-aea0-507d7a403176","pdfKey":"invoices/d264aad6-615e-4a8c-bb27-a5ac0940938b/96c7ad1e-d20d-4fa0-aea0-507d7a403176.pdf","bytes":1491}
+{"ts":"2026-11-27T18:21:08.457Z","level":"log","service":"worker","requestId":"bc85a50d-2d99-4ac0-9077-b5e8fb476801","companyId":"d264aad6-615e-4a8c-bb27-a5ac0940938b","msg":"Email to customer: invoice ready","to":"Yamada Trading Co.","invoiceId":"96c7ad1e-d20d-4fa0-aea0-507d7a403176"}
+{"ts":"2026-11-27T18:21:24.827Z","level":"log","service":"worker","msg":"kpis refreshed","companies":7}
+{"ts":"2026-11-27T18:21:54.828Z","level":"log","service":"worker","msg":"kpis refreshed","companies":7}
+{"ts":"2026-11-27T18:22:24.807Z","level":"log","service":"worker","msg":"kpis refreshed","companies":7}
+{"ts":"2026-11-27T18:22:54.842Z","level":"log","service":"worker","msg":"kpis refreshed","companies":7}
+{"ts":"2026-11-27T18:23:24.825Z","level":"log","service":"worker","msg":"kpis refreshed","companies":7}
+{"ts":"2026-11-27T18:23:54.831Z","level":"log","service":"worker","msg":"kpis refreshed","companies":8}
+{"ts":"2026-11-27T18:24:21.323Z","level":"log","service":"worker","requestId":"3d84740d-dbbd-47ec-a525-c959edff39e9","companyId":"9b9b4003-3ba3-4bf7-81dc-eb83b0327b1e","msg":"invoice pdf uploaded","invoiceId":"3df31327-1fd9-40cd-bdd9-0dfc988f5324","pdfKey":"invoices/9b9b4003-3ba3-4bf7-81dc-eb83b0327b1e/3df31327-1fd9-40cd-bdd9-0dfc988f5324.pdf","bytes":1489}
+{"ts":"2026-11-27T18:24:21.328Z","level":"log","service":"worker","requestId":"3d84740d-dbbd-47ec-a525-c959edff39e9","companyId":"9b9b4003-3ba3-4bf7-81dc-eb83b0327b1e","msg":"Email to customer: invoice ready","to":"Yamada Trading Co.","invoiceId":"3df31327-1fd9-40cd-bdd9-0dfc988f5324"}
+{"ts":"2026-11-27T18:24:24.837Z","level":"log","service":"worker","msg":"kpis refreshed","companies":9}
+{"ts":"2026-11-27T18:24:54.838Z","level":"log","service":"worker","msg":"kpis refreshed","companies":9}
+{"ts":"2026-11-27T18:25:24.841Z","level":"log","service":"worker","msg":"kpis refreshed","companies":9}
+{"ts":"2026-11-27T18:25:54.842Z","level":"log","service":"worker","msg":"kpis refreshed","companies":9}
+{"ts":"2026-11-27T18:26:24.843Z","level":"log","service":"worker","msg":"kpis refreshed","companies":9}
+{"ts":"2026-11-27T18:26:54.846Z","level":"log","service":"worker","msg":"kpis refreshed","companies":10}
+{"ts":"2026-11-27T18:27:21.405Z","level":"log","service":"worker","requestId":"ade0f819-cc94-4120-a0bb-f6b51a8f5e2c","companyId":"d6d04dee-2796-483c-bb2b-4aecb88d5cc3","msg":"invoice pdf uploaded","invoiceId":"3d942735-2e2c-49b1-b15e-4a18e20b9fc1","pdfKey":"invoices/d6d04dee-2796-483c-bb2b-4aecb88d5cc3/3d942735-2e2c-49b1-b15e-4a18e20b9fc1.pdf","bytes":1488}
+{"ts":"2026-11-27T18:27:21.411Z","level":"log","service":"worker","requestId":"ade0f819-cc94-4120-a0bb-f6b51a8f5e2c","companyId":"d6d04dee-2796-483c-bb2b-4aecb88d5cc3","msg":"Email to customer: invoice ready","to":"Yamada Trading Co.","invoiceId":"3d942735-2e2c-49b1-b15e-4a18e20b9fc1"}
+{"ts":"2026-11-27T18:27:24.849Z","level":"log","service":"worker","msg":"kpis refreshed","companies":11}
+{"ts":"2026-11-27T18:27:54.880Z","level":"log","service":"worker","msg":"kpis refreshed","companies":11}
+{"ts":"2026-11-27T18:28:24.852Z","level":"log","service":"worker","msg":"kpis refreshed","companies":11}
+{"ts":"2026-11-27T18:28:54.855Z","level":"log","service":"worker","msg":"kpis refreshed","companies":11}
+{"ts":"2026-11-27T18:29:24.856Z","level":"log","service":"worker","msg":"kpis refreshed","companies":11}
+{"ts":"2026-11-27T18:29:54.856Z","level":"log","service":"worker","msg":"kpis refreshed","companies":11}

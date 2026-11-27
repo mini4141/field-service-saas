@@ -1,6 +1,6 @@
 import { ListObjectsV2Command } from "@aws-sdk/client-s3";
 import type { S3Event } from "aws-lambda";
-import { defaultDeps, handler } from "./handler";
+import { defaultDeps, processEvent } from "./handler";
 
 /** Local stand-in for the S3 -> Lambda event: polls moto and runs the very same handler. */
 const bucket = process.env.S3_BUCKET ?? "fss-assets";
@@ -14,7 +14,7 @@ async function tick() {
     seen.add(obj.Key);
     const event = { Records: [{ s3: { bucket: { name: bucket }, object: { key: encodeURIComponent(obj.Key) } } }] } as unknown as S3Event;
     try {
-      await handler(event, deps);
+      await processEvent(event, deps);
     } catch (e) {
       seen.delete(obj.Key); // retry on next tick (e.g. API not up yet)
       console.error(JSON.stringify({ level: "error", service: "thumbnailer-watcher", key: obj.Key, msg: String(e) }));

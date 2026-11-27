@@ -1,0 +1,6 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="37.915386">
+<testsuite name="field-flow.spec.ts" timestamp="2026-11-27T18:27:04.101Z" hostname="" tests="1" failures="0" skipped="0" time="36.132" errors="0">
+<testcase name="field flow (Expo web): login -&gt; today -&gt; check in -&gt; 2 photos -&gt; complete -&gt; thumbnails + invoice" classname="field-flow.spec.ts" time="36.132">
+</testcase>
+</testsuite>
+</testsuites>

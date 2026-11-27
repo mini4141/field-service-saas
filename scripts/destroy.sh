@@ -4,6 +4,7 @@ set -uo pipefail
 source "$(dirname "$0")/lib.sh"
 cd "$ROOT"
 
+export MSYS_NO_PATHCONV=1
 export AWS_PROFILE=field-service-saas-deployer AWS_REGION=ap-southeast-2 AWS_DEFAULT_REGION=ap-southeast-2
 export KUBECONFIG="$LOCAL/kubeconfig-eks"
 TF="terraform -chdir=infra"
@@ -12,7 +13,7 @@ CLUSTER=$($TF output -raw cluster_name 2>/dev/null || true)
 
 echo "== 1. helm uninstall + delete the Traefik LoadBalancer Service (waits for the NLB to go)"
 if [ -n "$CLUSTER" ] && aws eks describe-cluster --name "$CLUSTER" >/dev/null 2>&1; then
-  aws eks update-kubeconfig --name "$CLUSTER" --kubeconfig "$KUBECONFIG" >/dev/null 2>&1
+  aws eks update-kubeconfig --name "$CLUSTER" --kubeconfig "$(cygpath -m "$KUBECONFIG")" >/dev/null 2>&1
   helm uninstall fss --wait --timeout 5m 2>&1 || true
   kubectl -n traefik delete svc traefik --wait=true --timeout=300s 2>&1 || true
   helm uninstall traefik -n traefik --wait --timeout 5m 2>&1 || true

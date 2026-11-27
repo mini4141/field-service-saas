@@ -1,0 +1,221 @@
+2026-11-27T18:18:07 INIT_START Runtime Version: nodejs:24.mainline.v133	Runtime Version ARN: arn:aws:lambda:ap-southeast-2::runtime:e2a10cf4a19b479b41df57bd581034ae0e89a78d399639a11cf95e6e63c9b669
+2026-11-27T18:18:07 2026-11-27T18:18:07.676Z	-	ERROR	Init Error 	{"errorType":"Error","errorMessage":"Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install","stack":["Error: Could not load the \"sharp\" module using the linux-x64 runtime","Possible solutions:","- Ensure optional dependencies can be installed:","    npm install --include=optional sharp","- Ensure your package manager supports multi-platform installation:","    See https://sharp.pixelplumbing.com/install#cross-platform","- Add platform-specific dependencies:","    npm install --os=linux --cpu=x64 sharp","- Consult the installation documentation:","    See https://sharp.pixelplumbing.com/install","    at Object.<anonymous> (/var/task/node_modules/sharp/lib/sharp.js:120:9)","    at Module._compile (node:internal/modules/cjs/loader:1929:14)","    at Object..js (node:internal/modules/cjs/loader:2060:10)","    at Module.load (node:internal/modules/cjs/loader:1651:32)","    at Module._load (node:internal/modules/cjs/loader:1443:12)","    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)","    at Module.require (node:internal/modules/cjs/loader:1674:12)","    at require (node:internal/modules/helpers:157:16)","    at Object.<anonymous> (/var/task/node_modules/sharp/lib/constructor.js:10:1)","    at Module._compile (node:internal/modules/cjs/loader:1929:14)"]}
+2026-11-27T18:18:07 node:internal/process/promises:394
+2026-11-27T18:18:07 triggerUncaughtException(err, true /* fromPromise */);
+2026-11-27T18:18:07 ^
+2026-11-27T18:18:07 Error: Could not load the "sharp" module using the linux-x64 runtime
+2026-11-27T18:18:07 Possible solutions:
+2026-11-27T18:18:07 - Ensure optional dependencies can be installed:
+2026-11-27T18:18:07 npm install --include=optional sharp
+2026-11-27T18:18:07 - Ensure your package manager supports multi-platform installation:
+2026-11-27T18:18:07 See https://sharp.pixelplumbing.com/install#cross-platform
+2026-11-27T18:18:07 - Add platform-specific dependencies:
+2026-11-27T18:18:07 npm install --os=linux --cpu=x64 sharp
+2026-11-27T18:18:07 - Consult the installation documentation:
+2026-11-27T18:18:07 See https://sharp.pixelplumbing.com/install
+2026-11-27T18:18:07 at Object.<anonymous> (/var/task/node_modules/sharp/lib/sharp.js:120:9)
+2026-11-27T18:18:07 at Module._compile (node:internal/modules/cjs/loader:1929:14)
+2026-11-27T18:18:07 at Object..js (node:internal/modules/cjs/loader:2060:10)
+2026-11-27T18:18:07 at Module.load (node:internal/modules/cjs/loader:1651:32)
+2026-11-27T18:18:07 at Module._load (node:internal/modules/cjs/loader:1443:12)
+2026-11-27T18:18:07 at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+2026-11-27T18:18:07 at Module.require (node:internal/modules/cjs/loader:1674:12)
+2026-11-27T18:18:07 at require (node:internal/modules/helpers:157:16)
+2026-11-27T18:18:07 at Object.<anonymous> (/var/task/node_modules/sharp/lib/constructor.js:10:1)
+2026-11-27T18:18:07 at Module._compile (node:internal/modules/cjs/loader:1929:14)
+2026-11-27T18:18:07 Node.js v24.22.3
+2026-11-27T18:18:07 INIT_REPORT Init Duration: 359.45 ms	Phase: init	Status: error	Error Type: Runtime.Unknown
+2026-11-27T18:18:07 2026-11-27T18:18:07.967Z	-	ERROR	Init Error 	{"errorType":"Error","errorMessage":"Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install","stack":["Error: Could not load the \"sharp\" module using the linux-x64 runtime","Possible solutions:","- Ensure optional dependencies can be installed:","    npm install --include=optional sharp","- Ensure your package manager supports multi-platform installation:","    See https://sharp.pixelplumbing.com/install#cross-platform","- Add platform-specific dependencies:","    npm install --os=linux --cpu=x64 sharp","- Consult the installation documentation:","    See https://sharp.pixelplumbing.com/install","    at Object.<anonymous> (/var/task/node_modules/sharp/lib/sharp.js:120:9)","    at Module._compile (node:internal/modules/cjs/loader:1929:14)","    at Object..js (node:internal/modules/cjs/loader:2060:10)","    at Module.load (node:internal/modules/cjs/loader:1651:32)","    at Module._load (node:internal/modules/cjs/loader:1443:12)","    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)","    at Module.require (node:internal/modules/cjs/loader:1674:12)","    at require (node:internal/modules/helpers:157:16)","    at Object.<anonymous> (/var/task/node_modules/sharp/lib/constructor.js:10:1)","    at Module._compile (node:internal/modules/cjs/loader:1929:14)"]}
+2026-11-27T18:18:07 node:internal/process/promises:394
+2026-11-27T18:18:07 triggerUncaughtException(err, true /* fromPromise */);
+2026-11-27T18:18:07 ^
+2026-11-27T18:18:07 Error: Could not load the "sharp" module using the linux-x64 runtime
+2026-11-27T18:18:07 Possible solutions:
+2026-11-27T18:18:07 - Ensure optional dependencies can be installed:
+2026-11-27T18:18:07 npm install --include=optional sharp
+2026-11-27T18:18:07 - Ensure your package manager supports multi-platform installation:
+2026-11-27T18:18:07 See https://sharp.pixelplumbing.com/install#cross-platform
+2026-11-27T18:18:07 - Add platform-specific dependencies:
+2026-11-27T18:18:07 npm install --os=linux --cpu=x64 sharp
+2026-11-27T18:18:07 - Consult the installation documentation:
+2026-11-27T18:18:07 See https://sharp.pixelplumbing.com/install
+2026-11-27T18:18:07 at Object.<anonymous> (/var/task/node_modules/sharp/lib/sharp.js:120:9)
+2026-11-27T18:18:07 at Module._compile (node:internal/modules/cjs/loader:1929:14)
+2026-11-27T18:18:07 at Object..js (node:internal/modules/cjs/loader:2060:10)
+2026-11-27T18:18:07 at Module.load (node:internal/modules/cjs/loader:1651:32)
+2026-11-27T18:18:07 at Module._load (node:internal/modules/cjs/loader:1443:12)
+2026-11-27T18:18:07 at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+2026-11-27T18:18:07 at Module.require (node:internal/modules/cjs/loader:1674:12)
+2026-11-27T18:18:07 at require (node:internal/modules/helpers:157:16)
+2026-11-27T18:18:07 at Object.<anonymous> (/var/task/node_modules/sharp/lib/constructor.js:10:1)
+2026-11-27T18:18:07 at Module._compile (node:internal/modules/cjs/loader:1929:14)
+2026-11-27T18:18:07 Node.js v24.22.3
+2026-11-27T18:18:07 INIT_REPORT Init Duration: 265.13 ms	Phase: invoke	Status: error	Error Type: Runtime.Unknown
+2026-11-27T18:18:07 START RequestId: 057f0a6c-015d-4bab-a1fd-94e8d60f0a1a Version: $LATEST
+2026-11-27T18:18:07 END RequestId: 057f0a6c-015d-4bab-a1fd-94e8d60f0a1a
+2026-11-27T18:18:07 REPORT RequestId: 057f0a6c-015d-4bab-a1fd-94e8d60f0a1a	Duration: 280.44 ms	Billed Duration: 281 ms	Memory Size: 512 MB	Max Memory Used: 107 MB	Status: error	Error Type: Runtime.Unknown
+2026-11-27T18:18:08 INIT_START Runtime Version: nodejs:24.mainline.v133	Runtime Version ARN: arn:aws:lambda:ap-southeast-2::runtime:e2a10cf4a19b479b41df57bd581034ae0e89a78d399639a11cf95e6e63c9b669
+2026-11-27T18:18:08 2026-11-27T18:18:08.326Z	-	ERROR	Init Error 	{"errorType":"Error","errorMessage":"Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install","stack":["Error: Could not load the \"sharp\" module using the linux-x64 runtime","Possible solutions:","- Ensure optional dependencies can be installed:","    npm install --include=optional sharp","- Ensure your package manager supports multi-platform installation:","    See https://sharp.pixelplumbing.com/install#cross-platform","- Add platform-specific dependencies:","    npm install --os=linux --cpu=x64 sharp","- Consult the installation documentation:","    See https://sharp.pixelplumbing.com/install","    at Object.<anonymous> (/var/task/node_modules/sharp/lib/sharp.js:120:9)","    at Module._compile (node:internal/modules/cjs/loader:1929:14)","    at Object..js (node:internal/modules/cjs/loader:2060:10)","    at Module.load (node:internal/modules/cjs/loader:1651:32)","    at Module._load (node:internal/modules/cjs/loader:1443:12)","    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)","    at Module.require (node:internal/modules/cjs/loader:1674:12)","    at require (node:internal/modules/helpers:157:16)","    at Object.<anonymous> (/var/task/node_modules/sharp/lib/constructor.js:10:1)","    at Module._compile (node:internal/modules/cjs/loader:1929:14)"]}
+2026-11-27T18:18:08 node:internal/process/promises:394
+2026-11-27T18:18:08 triggerUncaughtException(err, true /* fromPromise */);
+2026-11-27T18:18:08 ^
+2026-11-27T18:18:08 Error: Could not load the "sharp" module using the linux-x64 runtime
+2026-11-27T18:18:08 Possible solutions:
+2026-11-27T18:18:08 - Ensure optional dependencies can be installed:
+2026-11-27T18:18:08 npm install --include=optional sharp
+2026-11-27T18:18:08 - Ensure your package manager supports multi-platform installation:
+2026-11-27T18:18:08 See https://sharp.pixelplumbing.com/install#cross-platform
+2026-11-27T18:18:08 - Add platform-specific dependencies:
+2026-11-27T18:18:08 npm install --os=linux --cpu=x64 sharp
+2026-11-27T18:18:08 - Consult the installation documentation:
+2026-11-27T18:18:08 See https://sharp.pixelplumbing.com/install
+2026-11-27T18:18:08 at Object.<anonymous> (/var/task/node_modules/sharp/lib/sharp.js:120:9)
+2026-11-27T18:18:08 at Module._compile (node:internal/modules/cjs/loader:1929:14)
+2026-11-27T18:18:08 at Object..js (node:internal/modules/cjs/loader:2060:10)
+2026-11-27T18:18:08 at Module.load (node:internal/modules/cjs/loader:1651:32)
+2026-11-27T18:18:08 at Module._load (node:internal/modules/cjs/loader:1443:12)
+2026-11-27T18:18:08 at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+2026-11-27T18:18:08 at Module.require (node:internal/modules/cjs/loader:1674:12)
+2026-11-27T18:18:08 at require (node:internal/modules/helpers:157:16)
+2026-11-27T18:18:08 at Object.<anonymous> (/var/task/node_modules/sharp/lib/constructor.js:10:1)
+2026-11-27T18:18:08 at Module._compile (node:internal/modules/cjs/loader:1929:14)
+2026-11-27T18:18:08 Node.js v24.22.3
+2026-11-27T18:18:08 INIT_REPORT Init Duration: 345.85 ms	Phase: init	Status: error	Error Type: Runtime.Unknown
+2026-11-27T18:18:08 2026-11-27T18:18:08.599Z	-	ERROR	Init Error 	{"errorType":"Error","errorMessage":"Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install","stack":["Error: Could not load the \"sharp\" module using the linux-x64 runtime","Possible solutions:","- Ensure optional dependencies can be installed:","    npm install --include=optional sharp","- Ensure your package manager supports multi-platform installation:","    See https://sharp.pixelplumbing.com/install#cross-platform","- Add platform-specific dependencies:","    npm install --os=linux --cpu=x64 sharp","- Consult the installation documentation:","    See https://sharp.pixelplumbing.com/install","    at Object.<anonymous> (/var/task/node_modules/sharp/lib/sharp.js:120:9)","    at Module._compile (node:internal/modules/cjs/loader:1929:14)","    at Object..js (node:internal/modules/cjs/loader:2060:10)","    at Module.load (node:internal/modules/cjs/loader:1651:32)","    at Module._load (node:internal/modules/cjs/loader:1443:12)","    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)","    at Module.require (node:internal/modules/cjs/loader:1674:12)","    at require (node:internal/modules/helpers:157:16)","    at Object.<anonymous> (/var/task/node_modules/sharp/lib/constructor.js:10:1)","    at Module._compile (node:internal/modules/cjs/loader:1929:14)"]}
+2026-11-27T18:18:08 node:internal/process/promises:394
+2026-11-27T18:18:08 triggerUncaughtException(err, true /* fromPromise */);
+2026-11-27T18:18:08 ^
+2026-11-27T18:18:08 Error: Could not load the "sharp" module using the linux-x64 runtime
+2026-11-27T18:18:08 Possible solutions:
+2026-11-27T18:18:08 - Ensure optional dependencies can be installed:
+2026-11-27T18:18:08 npm install --include=optional sharp
+2026-11-27T18:18:08 - Ensure your package manager supports multi-platform installation:
+2026-11-27T18:18:08 See https://sharp.pixelplumbing.com/install#cross-platform
+2026-11-27T18:18:08 - Add platform-specific dependencies:
+2026-11-27T18:18:08 npm install --os=linux --cpu=x64 sharp
+2026-11-27T18:18:08 - Consult the installation documentation:
+2026-11-27T18:18:08 See https://sharp.pixelplumbing.com/install
+2026-11-27T18:18:08 at Object.<anonymous> (/var/task/node_modules/sharp/lib/sharp.js:120:9)
+2026-11-27T18:18:08 at Module._compile (node:internal/modules/cjs/loader:1929:14)
+2026-11-27T18:18:08 at Object..js (node:internal/modules/cjs/loader:2060:10)
+2026-11-27T18:18:08 at Module.load (node:internal/modules/cjs/loader:1651:32)
+2026-11-27T18:18:08 at Module._load (node:internal/modules/cjs/loader:1443:12)
+2026-11-27T18:18:08 at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+2026-11-27T18:18:08 at Module.require (node:internal/modules/cjs/loader:1674:12)
+2026-11-27T18:18:08 at require (node:internal/modules/helpers:157:16)
+2026-11-27T18:18:08 at Object.<anonymous> (/var/task/node_modules/sharp/lib/constructor.js:10:1)
+2026-11-27T18:18:08 at Module._compile (node:internal/modules/cjs/loader:1929:14)
+2026-11-27T18:18:08 Node.js v24.22.3
+2026-11-27T18:18:08 INIT_REPORT Init Duration: 256.27 ms	Phase: invoke	Status: error	Error Type: Runtime.Unknown
+2026-11-27T18:18:08 START RequestId: d9431eb7-9749-4db6-b21f-1917d5229c33 Version: $LATEST
+2026-11-27T18:18:08 END RequestId: d9431eb7-9749-4db6-b21f-1917d5229c33
+2026-11-27T18:18:08 REPORT RequestId: d9431eb7-9749-4db6-b21f-1917d5229c33	Duration: 271.85 ms	Billed Duration: 272 ms	Memory Size: 512 MB	Max Memory Used: 108 MB	Status: error	Error Type: Runtime.Unknown
+2026-11-27T18:19:10 2026-11-27T18:19:10.389Z	-	ERROR	Init Error 	{"errorType":"Error","errorMessage":"Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install","stack":["Error: Could not load the \"sharp\" module using the linux-x64 runtime","Possible solutions:","- Ensure optional dependencies can be installed:","    npm install --include=optional sharp","- Ensure your package manager supports multi-platform installation:","    See https://sharp.pixelplumbing.com/install#cross-platform","- Add platform-specific dependencies:","    npm install --os=linux --cpu=x64 sharp","- Consult the installation documentation:","    See https://sharp.pixelplumbing.com/install","    at Object.<anonymous> (/var/task/node_modules/sharp/lib/sharp.js:120:9)","    at Module._compile (node:internal/modules/cjs/loader:1929:14)","    at Object..js (node:internal/modules/cjs/loader:2060:10)","    at Module.load (node:internal/modules/cjs/loader:1651:32)","    at Module._load (node:internal/modules/cjs/loader:1443:12)","    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)","    at Module.require (node:internal/modules/cjs/loader:1674:12)","    at require (node:internal/modules/helpers:157:16)","    at Object.<anonymous> (/var/task/node_modules/sharp/lib/constructor.js:10:1)","    at Module._compile (node:internal/modules/cjs/loader:1929:14)"]}
+2026-11-27T18:19:10 node:internal/process/promises:394
+2026-11-27T18:19:10 triggerUncaughtException(err, true /* fromPromise */);
+2026-11-27T18:19:10 ^
+2026-11-27T18:19:10 Error: Could not load the "sharp" module using the linux-x64 runtime
+2026-11-27T18:19:10 Possible solutions:
+2026-11-27T18:19:10 - Ensure optional dependencies can be installed:
+2026-11-27T18:19:10 npm install --include=optional sharp
+2026-11-27T18:19:10 - Ensure your package manager supports multi-platform installation:
+2026-11-27T18:19:10 See https://sharp.pixelplumbing.com/install#cross-platform
+2026-11-27T18:19:10 - Add platform-specific dependencies:
+2026-11-27T18:19:10 npm install --os=linux --cpu=x64 sharp
+2026-11-27T18:19:10 - Consult the installation documentation:
+2026-11-27T18:19:10 See https://sharp.pixelplumbing.com/install
+2026-11-27T18:19:10 at Object.<anonymous> (/var/task/node_modules/sharp/lib/sharp.js:120:9)
+2026-11-27T18:19:10 at Module._compile (node:internal/modules/cjs/loader:1929:14)
+2026-11-27T18:19:10 at Object..js (node:internal/modules/cjs/loader:2060:10)
+2026-11-27T18:19:10 at Module.load (node:internal/modules/cjs/loader:1651:32)
+2026-11-27T18:19:10 at Module._load (node:internal/modules/cjs/loader:1443:12)
+2026-11-27T18:19:10 at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+2026-11-27T18:19:10 at Module.require (node:internal/modules/cjs/loader:1674:12)
+2026-11-27T18:19:10 at require (node:internal/modules/helpers:157:16)
+2026-11-27T18:19:10 at Object.<anonymous> (/var/task/node_modules/sharp/lib/constructor.js:10:1)
+2026-11-27T18:19:10 at Module._compile (node:internal/modules/cjs/loader:1929:14)
+2026-11-27T18:19:10 Node.js v24.22.3
+2026-11-27T18:19:10 INIT_REPORT Init Duration: 261.91 ms	Phase: invoke	Status: error	Error Type: Runtime.Unknown
+2026-11-27T18:19:10 START RequestId: 057f0a6c-015d-4bab-a1fd-94e8d60f0a1a Version: $LATEST
+2026-11-27T18:19:10 END RequestId: 057f0a6c-015d-4bab-a1fd-94e8d60f0a1a
+2026-11-27T18:19:10 REPORT RequestId: 057f0a6c-015d-4bab-a1fd-94e8d60f0a1a	Duration: 278.01 ms	Billed Duration: 279 ms	Memory Size: 512 MB	Max Memory Used: 107 MB	Status: error	Error Type: Runtime.Unknown
+2026-11-27T18:19:16 2026-11-27T18:19:16.029Z	-	ERROR	Init Error 	{"errorType":"Error","errorMessage":"Could not load the \"sharp\" module using the linux-x64 runtime\nPossible solutions:\n- Ensure optional dependencies can be installed:\n    npm install --include=optional sharp\n- Ensure your package manager supports multi-platform installation:\n    See https://sharp.pixelplumbing.com/install#cross-platform\n- Add platform-specific dependencies:\n    npm install --os=linux --cpu=x64 sharp\n- Consult the installation documentation:\n    See https://sharp.pixelplumbing.com/install","stack":["Error: Could not load the \"sharp\" module using the linux-x64 runtime","Possible solutions:","- Ensure optional dependencies can be installed:","    npm install --include=optional sharp","- Ensure your package manager supports multi-platform installation:","    See https://sharp.pixelplumbing.com/install#cross-platform","- Add platform-specific dependencies:","    npm install --os=linux --cpu=x64 sharp","- Consult the installation documentation:","    See https://sharp.pixelplumbing.com/install","    at Object.<anonymous> (/var/task/node_modules/sharp/lib/sharp.js:120:9)","    at Module._compile (node:internal/modules/cjs/loader:1929:14)","    at Object..js (node:internal/modules/cjs/loader:2060:10)","    at Module.load (node:internal/modules/cjs/loader:1651:32)","    at Module._load (node:internal/modules/cjs/loader:1443:12)","    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)","    at Module.require (node:internal/modules/cjs/loader:1674:12)","    at require (node:internal/modules/helpers:157:16)","    at Object.<anonymous> (/var/task/node_modules/sharp/lib/constructor.js:10:1)","    at Module._compile (node:internal/modules/cjs/loader:1929:14)"]}
+2026-11-27T18:19:16 node:internal/process/promises:394
+2026-11-27T18:19:16 triggerUncaughtException(err, true /* fromPromise */);
+2026-11-27T18:19:16 ^
+2026-11-27T18:19:16 Error: Could not load the "sharp" module using the linux-x64 runtime
+2026-11-27T18:19:16 Possible solutions:
+2026-11-27T18:19:16 - Ensure optional dependencies can be installed:
+2026-11-27T18:19:16 npm install --include=optional sharp
+2026-11-27T18:19:16 - Ensure your package manager supports multi-platform installation:
+2026-11-27T18:19:16 See https://sharp.pixelplumbing.com/install#cross-platform
+2026-11-27T18:19:16 - Add platform-specific dependencies:
+2026-11-27T18:19:16 npm install --os=linux --cpu=x64 sharp
+2026-11-27T18:19:16 - Consult the installation documentation:
+2026-11-27T18:19:16 See https://sharp.pixelplumbing.com/install
+2026-11-27T18:19:16 at Object.<anonymous> (/var/task/node_modules/sharp/lib/sharp.js:120:9)
+2026-11-27T18:19:16 at Module._compile (node:internal/modules/cjs/loader:1929:14)
+2026-11-27T18:19:16 at Object..js (node:internal/modules/cjs/loader:2060:10)
+2026-11-27T18:19:16 at Module.load (node:internal/modules/cjs/loader:1651:32)
+2026-11-27T18:19:16 at Module._load (node:internal/modules/cjs/loader:1443:12)
+2026-11-27T18:19:16 at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+2026-11-27T18:19:16 at Module.require (node:internal/modules/cjs/loader:1674:12)
+2026-11-27T18:19:16 at require (node:internal/modules/helpers:157:16)
+2026-11-27T18:19:16 at Object.<anonymous> (/var/task/node_modules/sharp/lib/constructor.js:10:1)
+2026-11-27T18:19:16 at Module._compile (node:internal/modules/cjs/loader:1929:14)
+2026-11-27T18:19:16 Node.js v24.22.3
+2026-11-27T18:19:16 INIT_REPORT Init Duration: 269.58 ms	Phase: invoke	Status: error	Error Type: Runtime.Unknown
+2026-11-27T18:19:16 START RequestId: d9431eb7-9749-4db6-b21f-1917d5229c33 Version: $LATEST
+2026-11-27T18:19:16 END RequestId: d9431eb7-9749-4db6-b21f-1917d5229c33
+2026-11-27T18:19:16 REPORT RequestId: d9431eb7-9749-4db6-b21f-1917d5229c33	Duration: 284.69 ms	Billed Duration: 285 ms	Memory Size: 512 MB	Max Memory Used: 107 MB	Status: error	Error Type: Runtime.Unknown
+2026-11-27T18:21:01 INIT_START Runtime Version: nodejs:24.mainline.v133	Runtime Version ARN: arn:aws:lambda:ap-southeast-2::runtime:e2a10cf4a19b479b41df57bd581034ae0e89a78d399639a11cf95e6e63c9b669
+2026-11-27T18:21:01 START RequestId: d9431eb7-9749-4db6-b21f-1917d5229c33 Version: $LATEST
+2026-11-27T18:21:01 2026-11-27T18:21:01.868Z	d9431eb7-9749-4db6-b21f-1917d5229c33	ERROR	Invoke Error 	{"errorType":"TypeError","errorMessage":"Cannot read properties of undefined (reading 'send')","stack":["TypeError: Cannot read properties of undefined (reading 'send')","    at BufferedInvokeProcessor.handler (/var/task/index.js:56:31)","    at BufferedInvokeProcessor.processInvoke (file:///var/runtime/index.mjs:1150:33)","    at file:///var/runtime/index.mjs:1237:116","    at InvokeStoreSingle.run (file:///var/runtime/index.mjs:83:12)","    at _Runtime.runWithInvokeContext (file:///var/runtime/index.mjs:1259:24)","    at async _Runtime.processSingleConcurrent (file:///var/runtime/index.mjs:1237:7)","    at async _Runtime.start (file:///var/runtime/index.mjs:1224:7)","    at async ignition (file:///var/runtime/index.mjs:1725:5)"]}
+2026-11-27T18:21:01 END RequestId: d9431eb7-9749-4db6-b21f-1917d5229c33
+2026-11-27T18:21:01 REPORT RequestId: d9431eb7-9749-4db6-b21f-1917d5229c33	Duration: 7.29 ms	Billed Duration: 442 ms	Memory Size: 512 MB	Max Memory Used: 118 MB	Init Duration: 434.15 ms
+2026-11-27T18:21:04 START RequestId: 057f0a6c-015d-4bab-a1fd-94e8d60f0a1a Version: $LATEST
+2026-11-27T18:21:04 2026-11-27T18:21:04.557Z	057f0a6c-015d-4bab-a1fd-94e8d60f0a1a	ERROR	Invoke Error 	{"errorType":"TypeError","errorMessage":"Cannot read properties of undefined (reading 'send')","stack":["TypeError: Cannot read properties of undefined (reading 'send')","    at BufferedInvokeProcessor.handler (/var/task/index.js:56:31)","    at BufferedInvokeProcessor.processInvoke (file:///var/runtime/index.mjs:1150:33)","    at file:///var/runtime/index.mjs:1237:116","    at InvokeStoreSingle.run (file:///var/runtime/index.mjs:83:12)","    at _Runtime.runWithInvokeContext (file:///var/runtime/index.mjs:1259:24)","    at async _Runtime.processSingleConcurrent (file:///var/runtime/index.mjs:1237:7)","    at async _Runtime.start (file:///var/runtime/index.mjs:1224:7)","    at async ignition (file:///var/runtime/index.mjs:1725:5)"]}
+2026-11-27T18:21:04 END RequestId: 057f0a6c-015d-4bab-a1fd-94e8d60f0a1a
+2026-11-27T18:21:04 REPORT RequestId: 057f0a6c-015d-4bab-a1fd-94e8d60f0a1a	Duration: 2.46 ms	Billed Duration: 3 ms	Memory Size: 512 MB	Max Memory Used: 118 MB
+2026-11-27T18:21:07 START RequestId: 7e2373e6-16ac-40af-a5fe-6e85b4a8d406 Version: $LATEST
+2026-11-27T18:21:07 2026-11-27T18:21:07.643Z	7e2373e6-16ac-40af-a5fe-6e85b4a8d406	ERROR	Invoke Error 	{"errorType":"TypeError","errorMessage":"Cannot read properties of undefined (reading 'send')","stack":["TypeError: Cannot read properties of undefined (reading 'send')","    at BufferedInvokeProcessor.handler (/var/task/index.js:56:31)","    at BufferedInvokeProcessor.processInvoke (file:///var/runtime/index.mjs:1150:33)","    at file:///var/runtime/index.mjs:1237:116","    at InvokeStoreSingle.run (file:///var/runtime/index.mjs:83:12)","    at _Runtime.runWithInvokeContext (file:///var/runtime/index.mjs:1259:24)","    at async _Runtime.processSingleConcurrent (file:///var/runtime/index.mjs:1237:7)","    at async _Runtime.start (file:///var/runtime/index.mjs:1224:7)","    at async ignition (file:///var/runtime/index.mjs:1725:5)"]}
+2026-11-27T18:21:07 END RequestId: 7e2373e6-16ac-40af-a5fe-6e85b4a8d406
+2026-11-27T18:21:07 REPORT RequestId: 7e2373e6-16ac-40af-a5fe-6e85b4a8d406	Duration: 2.59 ms	Billed Duration: 3 ms	Memory Size: 512 MB	Max Memory Used: 118 MB
+2026-11-27T18:21:08 START RequestId: 29ba8d84-57d2-4f54-98d1-d6dd1d6ebdb0 Version: $LATEST
+2026-11-27T18:21:08 2026-11-27T18:21:08.710Z	29ba8d84-57d2-4f54-98d1-d6dd1d6ebdb0	ERROR	Invoke Error 	{"errorType":"TypeError","errorMessage":"Cannot read properties of undefined (reading 'send')","stack":["TypeError: Cannot read properties of undefined (reading 'send')","    at BufferedInvokeProcessor.handler (/var/task/index.js:56:31)","    at BufferedInvokeProcessor.processInvoke (file:///var/runtime/index.mjs:1150:33)","    at file:///var/runtime/index.mjs:1237:116","    at InvokeStoreSingle.run (file:///var/runtime/index.mjs:83:12)","    at _Runtime.runWithInvokeContext (file:///var/runtime/index.mjs:1259:24)","    at async _Runtime.processSingleConcurrent (file:///var/runtime/index.mjs:1237:7)","    at async _Runtime.start (file:///var/runtime/index.mjs:1224:7)","    at async ignition (file:///var/runtime/index.mjs:1725:5)"]}
+2026-11-27T18:21:08 END RequestId: 29ba8d84-57d2-4f54-98d1-d6dd1d6ebdb0
+2026-11-27T18:21:08 REPORT RequestId: 29ba8d84-57d2-4f54-98d1-d6dd1d6ebdb0	Duration: 2.18 ms	Billed Duration: 3 ms	Memory Size: 512 MB	Max Memory Used: 118 MB
+2026-11-27T18:22:02 START RequestId: 29ba8d84-57d2-4f54-98d1-d6dd1d6ebdb0 Version: $LATEST
+2026-11-27T18:22:02 2026-11-27T18:22:02.863Z	29ba8d84-57d2-4f54-98d1-d6dd1d6ebdb0	ERROR	Invoke Error 	{"errorType":"TypeError","errorMessage":"Cannot read properties of undefined (reading 'send')","stack":["TypeError: Cannot read properties of undefined (reading 'send')","    at BufferedInvokeProcessor.handler (/var/task/index.js:56:31)","    at BufferedInvokeProcessor.processInvoke (file:///var/runtime/index.mjs:1150:33)","    at file:///var/runtime/index.mjs:1237:116","    at InvokeStoreSingle.run (file:///var/runtime/index.mjs:83:12)","    at _Runtime.runWithInvokeContext (file:///var/runtime/index.mjs:1259:24)","    at async _Runtime.processSingleConcurrent (file:///var/runtime/index.mjs:1237:7)","    at async _Runtime.start (file:///var/runtime/index.mjs:1224:7)","    at async ignition (file:///var/runtime/index.mjs:1725:5)"]}
+2026-11-27T18:22:02 END RequestId: 29ba8d84-57d2-4f54-98d1-d6dd1d6ebdb0
+2026-11-27T18:22:02 REPORT RequestId: 29ba8d84-57d2-4f54-98d1-d6dd1d6ebdb0	Duration: 3.26 ms	Billed Duration: 4 ms	Memory Size: 512 MB	Max Memory Used: 118 MB
+2026-11-27T18:22:04 START RequestId: 7e2373e6-16ac-40af-a5fe-6e85b4a8d406 Version: $LATEST
+2026-11-27T18:22:04 2026-11-27T18:22:04.799Z	7e2373e6-16ac-40af-a5fe-6e85b4a8d406	ERROR	Invoke Error 	{"errorType":"TypeError","errorMessage":"Cannot read properties of undefined (reading 'send')","stack":["TypeError: Cannot read properties of undefined (reading 'send')","    at BufferedInvokeProcessor.handler (/var/task/index.js:56:31)","    at BufferedInvokeProcessor.processInvoke (file:///var/runtime/index.mjs:1150:33)","    at file:///var/runtime/index.mjs:1237:116","    at InvokeStoreSingle.run (file:///var/runtime/index.mjs:83:12)","    at _Runtime.runWithInvokeContext (file:///var/runtime/index.mjs:1259:24)","    at async _Runtime.processSingleConcurrent (file:///var/runtime/index.mjs:1237:7)","    at async _Runtime.start (file:///var/runtime/index.mjs:1224:7)","    at async ignition (file:///var/runtime/index.mjs:1725:5)"]}
+2026-11-27T18:22:04 END RequestId: 7e2373e6-16ac-40af-a5fe-6e85b4a8d406
+2026-11-27T18:22:04 REPORT RequestId: 7e2373e6-16ac-40af-a5fe-6e85b4a8d406	Duration: 2.40 ms	Billed Duration: 3 ms	Memory Size: 512 MB	Max Memory Used: 118 MB
+2026-11-27T18:23:56 INIT_START Runtime Version: nodejs:24.mainline.v133	Runtime Version ARN: arn:aws:lambda:ap-southeast-2::runtime:e2a10cf4a19b479b41df57bd581034ae0e89a78d399639a11cf95e6e63c9b669
+2026-11-27T18:23:56 START RequestId: 7e2373e6-16ac-40af-a5fe-6e85b4a8d406 Version: $LATEST
+2026-11-27T18:23:57 INIT_START Runtime Version: nodejs:24.mainline.v133	Runtime Version ARN: arn:aws:lambda:ap-southeast-2::runtime:e2a10cf4a19b479b41df57bd581034ae0e89a78d399639a11cf95e6e63c9b669
+2026-11-27T18:23:57 2026-11-27T18:23:57.348Z	7e2373e6-16ac-40af-a5fe-6e85b4a8d406	INFO	{"ts":"2026-11-27T18:23:57.347Z","level":"log","service":"thumbnailer","msg":"thumbnail created","key":"photos/d264aad6-615e-4a8c-bb27-a5ac0940938b/c5c46b00-eeff-4643-8275-784154141d58/c0f697e5-ae39-452d-b3cd-99a67e393cb4-photo1.png","thumbKey":"thumbs/d264aad6-615e-4a8c-bb27-a5ac0940938b/c5c46b00-eeff-4643-8275-784154141d58/c0f697e5-ae39-452d-b3cd-99a67e393cb4-photo1.png.jpg","bytes":689}
+2026-11-27T18:23:57 END RequestId: 7e2373e6-16ac-40af-a5fe-6e85b4a8d406
+2026-11-27T18:23:57 REPORT RequestId: 7e2373e6-16ac-40af-a5fe-6e85b4a8d406	Duration: 762.12 ms	Billed Duration: 1195 ms	Memory Size: 512 MB	Max Memory Used: 131 MB	Init Duration: 432.04 ms
+2026-11-27T18:23:57 START RequestId: 29ba8d84-57d2-4f54-98d1-d6dd1d6ebdb0 Version: $LATEST
+2026-11-27T18:23:58 2026-11-27T18:23:58.292Z	29ba8d84-57d2-4f54-98d1-d6dd1d6ebdb0	INFO	{"ts":"2026-11-27T18:23:58.292Z","level":"log","service":"thumbnailer","msg":"thumbnail created","key":"photos/d264aad6-615e-4a8c-bb27-a5ac0940938b/c5c46b00-eeff-4643-8275-784154141d58/07c9aa8f-8e5e-4114-ae02-c9689792715d-photo2.png","thumbKey":"thumbs/d264aad6-615e-4a8c-bb27-a5ac0940938b/c5c46b00-eeff-4643-8275-784154141d58/07c9aa8f-8e5e-4114-ae02-c9689792715d-photo2.png.jpg","bytes":689}
+2026-11-27T18:23:58 END RequestId: 29ba8d84-57d2-4f54-98d1-d6dd1d6ebdb0
+2026-11-27T18:23:58 REPORT RequestId: 29ba8d84-57d2-4f54-98d1-d6dd1d6ebdb0	Duration: 765.19 ms	Billed Duration: 1134 ms	Memory Size: 512 MB	Max Memory Used: 131 MB	Init Duration: 368.72 ms
+2026-11-27T18:24:19 START RequestId: a6df1ec4-0af3-4138-a3d3-6f4cae3b663e Version: $LATEST
+2026-11-27T18:24:19 2026-11-27T18:24:19.840Z	a6df1ec4-0af3-4138-a3d3-6f4cae3b663e	INFO	{"ts":"2026-11-27T18:24:19.840Z","level":"log","service":"thumbnailer","msg":"thumbnail created","key":"photos/9b9b4003-3ba3-4bf7-81dc-eb83b0327b1e/dab7b408-ada0-4e02-b870-842b6309807f/ef9e2c7e-a572-4c9b-9e37-a62f325a1dcb-photo1.png","thumbKey":"thumbs/9b9b4003-3ba3-4bf7-81dc-eb83b0327b1e/dab7b408-ada0-4e02-b870-842b6309807f/ef9e2c7e-a572-4c9b-9e37-a62f325a1dcb-photo1.png.jpg","bytes":689}
+2026-11-27T18:24:19 END RequestId: a6df1ec4-0af3-4138-a3d3-6f4cae3b663e
+2026-11-27T18:24:19 REPORT RequestId: a6df1ec4-0af3-4138-a3d3-6f4cae3b663e	Duration: 155.47 ms	Billed Duration: 156 ms	Memory Size: 512 MB	Max Memory Used: 133 MB
+2026-11-27T18:24:21 START RequestId: 60f38812-3d21-4bc3-afb9-f346a705d9e9 Version: $LATEST
+2026-11-27T18:24:21 2026-11-27T18:24:21.799Z	60f38812-3d21-4bc3-afb9-f346a705d9e9	INFO	{"ts":"2026-11-27T18:24:21.799Z","level":"log","service":"thumbnailer","msg":"thumbnail created","key":"photos/9b9b4003-3ba3-4bf7-81dc-eb83b0327b1e/dab7b408-ada0-4e02-b870-842b6309807f/57a5c9de-828e-44d7-b2f0-2b20579636ef-photo2.png","thumbKey":"thumbs/9b9b4003-3ba3-4bf7-81dc-eb83b0327b1e/dab7b408-ada0-4e02-b870-842b6309807f/57a5c9de-828e-44d7-b2f0-2b20579636ef-photo2.png.jpg","bytes":689}
+2026-11-27T18:24:21 END RequestId: 60f38812-3d21-4bc3-afb9-f346a705d9e9
+2026-11-27T18:24:21 REPORT RequestId: 60f38812-3d21-4bc3-afb9-f346a705d9e9	Duration: 323.15 ms	Billed Duration: 324 ms	Memory Size: 512 MB	Max Memory Used: 155 MB
+2026-11-27T18:27:20 START RequestId: aef24043-5a74-49f9-a6e6-af44cce26ff9 Version: $LATEST
+2026-11-27T18:27:20 2026-11-27T18:27:20.525Z	aef24043-5a74-49f9-a6e6-af44cce26ff9	INFO	{"ts":"2026-11-27T18:27:20.525Z","level":"log","service":"thumbnailer","msg":"thumbnail created","key":"photos/d6d04dee-2796-483c-bb2b-4aecb88d5cc3/24371f71-2acf-4ca1-b85d-6ac8993e2834/a38f30a9-87ee-4396-b5ec-5c81a171635e-photo1.png","thumbKey":"thumbs/d6d04dee-2796-483c-bb2b-4aecb88d5cc3/24371f71-2acf-4ca1-b85d-6ac8993e2834/a38f30a9-87ee-4396-b5ec-5c81a171635e-photo1.png.jpg","bytes":689}
+2026-11-27T18:27:20 END RequestId: aef24043-5a74-49f9-a6e6-af44cce26ff9
+2026-11-27T18:27:20 REPORT RequestId: aef24043-5a74-49f9-a6e6-af44cce26ff9	Duration: 316.54 ms	Billed Duration: 317 ms	Memory Size: 512 MB	Max Memory Used: 155 MB
+2026-11-27T18:27:21 START RequestId: 1a8dabba-f183-4bf0-bb01-c07016bf902c Version: $LATEST
+2026-11-27T18:27:21 2026-11-27T18:27:21.325Z	1a8dabba-f183-4bf0-bb01-c07016bf902c	INFO	{"ts":"2026-11-27T18:27:21.325Z","level":"log","service":"thumbnailer","msg":"thumbnail created","key":"photos/d6d04dee-2796-483c-bb2b-4aecb88d5cc3/24371f71-2acf-4ca1-b85d-6ac8993e2834/5be07178-fcb5-43e1-a9fd-dac38add1a81-photo2.png","thumbKey":"thumbs/d6d04dee-2796-483c-bb2b-4aecb88d5cc3/24371f71-2acf-4ca1-b85d-6ac8993e2834/5be07178-fcb5-43e1-a9fd-dac38add1a81-photo2.png.jpg","bytes":689}
+2026-11-27T18:27:21 END RequestId: 1a8dabba-f183-4bf0-bb01-c07016bf902c
+2026-11-27T18:27:21 REPORT RequestId: 1a8dabba-f183-4bf0-bb01-c07016bf902c	Duration: 126.19 ms	Billed Duration: 127 ms	Memory Size: 512 MB	Max Memory Used: 155 MB
