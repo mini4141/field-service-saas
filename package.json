@@ -1,0 +1,17 @@
+{
+  "name": "field-service-saas",
+  "private": true,
+  "packageManager": "pnpm@12.3.4",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "gen:api-client": "pnpm --filter @fss/api build:openapi && pnpm --filter @fss/api-client generate"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0",
+    "typescript": "~5.9.3"
+  }
+}
