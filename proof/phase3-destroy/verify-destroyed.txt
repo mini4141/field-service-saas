@@ -1,0 +1,17 @@
+verify-destroyed @ 2026-11-27T18:43:30Z
+OK    EKS clusters
+OK    RDS instances
+OK    ElastiCache clusters
+OK    Lambda functions (field-service)
+OK    CloudFront distributions
+OK    Load balancers (ELBv2)
+OK    Classic ELBs
+OK    NAT gateways (not deleted)
+OK    S3 buckets (field-service)
+OK    ECR repositories (fss-*)
+OK    EC2 instances running
+OK    Elastic IPs
+OK    CloudWatch log groups (field-service)
+--- tagging API (Project=field-service-saas); entries can linger a few minutes after deletion
+OK    tagging API reports nothing
+RESULT: nothing billable remains

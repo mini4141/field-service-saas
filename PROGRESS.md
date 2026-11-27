@@ -1,6 +1,6 @@
 # PROGRESS
 
-Resume from the first unticked item. Current phase: **1 (CI check pending) → 2**
+Resume from the first unticked item. Current phase: **all phases complete (0-4)**
 
 ## Coverage matrix (SPECS §2)
 - [x] Features end to end (web, API, worker, mobile) — e2e tests
@@ -10,7 +10,7 @@ Resume from the first unticked item. Current phase: **1 (CI check pending) → 2
 - [x] Support rotations (docs/support-playbook.md + correlation IDs)
 - [x] TypeScript, React, backend frameworks, SQL/Prisma modelling, async architecture — CI
 - [x] Git, PR reviews, CI/CD, automated tests — GitHub Actions
-- [ ] NestJS, Prisma, PostgreSQL, AWS (EKS, S3, Lambda), Redis, Next.js, Expo — proof
+- [x] NestJS, Prisma, PostgreSQL, AWS (EKS, S3, Lambda), Redis, Next.js, Expo — proof
 - [x] Docker, cloud infra, AI-assisted dev (docs/AI_USAGE.md), multi-tenant B2B
 
 ## Phase 0: scaffold
@@ -22,16 +22,16 @@ Resume from the first unticked item. Current phase: **1 (CI check pending) → 2
 - [x] tests/: Jest, Vitest, Playwright reports
 - [x] screenshots 01-signup, 02-quote-builder, 03-public-quote-accept, 04-calendar, 05-mobile-today, 06-mobile-complete-photos, 07-job-thumbnails, 08-invoice-pdf, 09-dashboard-kpis, 10-swagger
 - [x] logs/worker-invoice.log, logs/request-id-trace.log, logs/kind-get-all.txt
-- [ ] scripts/test-all.sh green, CI green on main, proof index complete
+- [x] scripts/test-all.sh green, CI green on main, proof index complete
 
 ## Phase 2: AWS (SPECS §10)
-- [ ] aws sts get-caller-identity OK
-- [ ] screenshots 01-eks-dashboard, 02-cf-mobile-complete, 03-eks-thumbnails, 04-eks-invoice
-- [ ] logs/lambda-thumbnailer.log, logs/kubectl-eks.txt, resources.txt
-- [ ] tests/playwright-cloud/
+- [x] aws sts get-caller-identity OK
+- [x] screenshots 01-eks-dashboard, 02-cf-mobile-complete, 03-eks-thumbnails, 04-eks-invoice
+- [x] logs/lambda-thumbnailer.log, logs/kubectl-eks.txt, resources.txt
+- [x] tests/playwright-cloud/
 
 ## Phase 3: destroy (SPECS §11)
-- [ ] destroy.sh run  - [ ] verify-destroyed.sh clean (proof/phase3-destroy/verify-destroyed.txt)
+- [x] destroy.sh run  - [x] verify-destroyed.sh clean (proof/phase3-destroy/verify-destroyed.txt)
 
 ## Phase 4: write-up
-- [ ] docs/PORTFOLIO.md  - [ ] README final  - [ ] pushed
+- [x] docs/PORTFOLIO.md  - [x] README final  - [x] pushed

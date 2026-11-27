@@ -24,6 +24,20 @@ Everything here is captured by scripts from the running system (`scripts/capture
 
 Native Android was not run (no emulator available); the field app is verified as an Expo **web** build, which is also what gets deployed.
 
-## Phase 2: AWS and Phase 3: destroy
+## Phase 2: AWS (EKS, RDS, ElastiCache, S3, Lambda, CloudFront)
 
-See `phase2-cloud/` and `phase3-destroy/verify-destroyed.txt` (added when those phases run).
+| Artifact | What it proves |
+|---|---|
+| `phase2-cloud/screenshots/01-eks-dashboard.png` | owner dashboard on EKS with live KPIs after the demo flow |
+| `02-cf-mobile-complete.png` | Expo web build served from CloudFront completing a job with 2 photos uploaded to real S3 |
+| `03-eks-thumbnails.png` | thumbnails created by the real Lambda and shown by the EKS web app |
+| `04-eks-invoice.png` | invoice PDF rendered by the worker on EKS, downloaded via presigned S3 URL |
+| `05-cloudwatch-lambda.png` | Lambda invocations graph rendered by the CLI |
+| `phase2-cloud/logs/lambda-thumbnailer.log` | CloudWatch log of the thumbnailer |
+| `phase2-cloud/logs/kubectl-eks.txt` | cluster, spot nodes, pods, api/worker logs (account ID redacted) |
+| `phase2-cloud/resources.txt` | Terraform-managed resources and tagged ARNs |
+| `phase2-cloud/tests/playwright-cloud/` | Playwright reports for the web and Expo web flows run against the cloud URLs |
+
+## Phase 3: destroy
+
+`phase3-destroy/verify-destroyed.txt`: every billable service checked directly after `scripts/destroy.sh` (44 resources destroyed). Nothing remains.

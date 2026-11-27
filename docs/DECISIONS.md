@@ -4,3 +4,9 @@
 - 2026-11-27 · `.npmrc` uses `node-linker=hoisted` · Expo/Metro and React Native resolve poorly through pnpm's symlinked store.
 - 2026-11-27 · Added `packages/shared` (tenant context, Prisma extension, queue names, S3 helper, logger) · API and worker both need the same code; SPECS layout lists only three packages.
 - 2026-11-27 · Local tool versions: node 24.12.0, pnpm 12.3.4, docker 29.7.2, kind 0.33.0, kubectl 1.36.1, helm 4.3.2, terraform 1.17.2, aws-cli 2.42.1 · all preinstalled.
+- 2026-11-28 · EKS 1.35 (not 1.33) · older versions risk extended-support pricing.
+- 2026-11-28 · CloudFront serves Expo web and proxies /api/* to the Traefik NLB; Terraform applied twice (the NLB host is only known after Helm) · avoids mixed content from an HTTPS page to an HTTP NLB without a domain or certificate.
+- 2026-11-28 · EKS Pod Identity (not IRSA) for S3 access · no OIDC provider or static keys needed.
+- 2026-11-28 · Managed CloudFront policies looked up by name via data sources · hard-coded policy IDs were rejected by the API.
+- 2026-11-28 · Lambda entry `handler(event)` is separate from `processEvent(event, deps)` · Lambda passes a context as the second argument.
+
