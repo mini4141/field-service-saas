@@ -1,0 +1,5 @@
+{
+  "extends": "@fss/config/tsconfig.base.json",
+  "compilerOptions": { "outDir": "dist", "rootDir": ".", "types": ["node", "jest"] },
+  "include": ["src", "test"]
+}

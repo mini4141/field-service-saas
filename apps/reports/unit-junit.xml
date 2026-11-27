@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="2" failures="0" errors="0" time="18.996">
+  <testsuite name="JobsService" errors="0" failures="0" skipped="0" timestamp="2026-11-27T15:59:34" time="16.63" tests="1">
+    <testcase classname="JobsService scheduling assigns the field user and marks the job scheduled" name="JobsService scheduling assigns the field user and marks the job scheduled" time="0.024">
+    </testcase>
+  </testsuite>
+  <testsuite name="QuotesService" errors="0" failures="0" skipped="0" timestamp="2026-11-27T15:59:34" time="17.008" tests="1">
+    <testcase classname="QuotesService computes the quote total server-side (including per-line tax)" name="QuotesService computes the quote total server-side (including per-line tax)" time="0.02">
+    </testcase>
+  </testsuite>
+</testsuites>

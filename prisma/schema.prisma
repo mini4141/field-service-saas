@@ -1,0 +1,176 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  owner
+  office
+  field
+}
+
+enum QuoteStatus {
+  draft
+  sent
+  accepted
+}
+
+enum JobStatus {
+  unscheduled
+  scheduled
+  in_progress
+  completed
+}
+
+enum InvoiceStatus {
+  pending
+  ready
+}
+
+model Company {
+  id        String   @id @default(uuid())
+  name      String
+  createdAt DateTime @default(now())
+
+  users     User[]
+  customers Customer[]
+  quotes    Quote[]
+  jobs      Job[]
+}
+
+model User {
+  id           String   @id @default(uuid())
+  companyId    String
+  email        String   @unique
+  name         String
+  role         Role
+  passwordHash String?
+  inviteToken  String?  @unique
+  createdAt    DateTime @default(now())
+
+  company Company @relation(fields: [companyId], references: [id])
+  jobs    Job[]   @relation("assignee")
+
+  @@index([companyId, role])
+}
+
+model Customer {
+  id        String   @id @default(uuid())
+  companyId String
+  name      String
+  email     String?
+  phone     String?
+  address   String?
+  createdAt DateTime @default(now())
+
+  company Company @relation(fields: [companyId], references: [id])
+  quotes  Quote[]
+  jobs    Job[]
+
+  @@index([companyId, name])
+}
+
+model Quote {
+  id         String      @id @default(uuid())
+  companyId  String
+  customerId String
+  title      String
+  status     QuoteStatus @default(draft)
+  token      String      @unique @default(uuid())
+  total      Int         @default(0)
+  createdAt  DateTime    @default(now())
+  sentAt     DateTime?
+  acceptedAt DateTime?
+
+  company  Company     @relation(fields: [companyId], references: [id])
+  customer Customer    @relation(fields: [customerId], references: [id])
+  items    QuoteItem[]
+  job      Job?
+
+  @@index([companyId, status])
+}
+
+model QuoteItem {
+  id          String @id @default(uuid())
+  companyId   String
+  quoteId     String
+  description String
+  qty         Int
+  unitPrice   Int
+  taxPercent  Int    @default(0)
+
+  quote Quote @relation(fields: [quoteId], references: [id], onDelete: Cascade)
+
+  @@index([companyId, quoteId])
+}
+
+model Job {
+  id          String    @id @default(uuid())
+  companyId   String
+  quoteId     String    @unique
+  customerId  String
+  title       String
+  address     String?
+  status      JobStatus @default(unscheduled)
+  scheduledAt DateTime?
+  assigneeId  String?
+  checkedInAt DateTime?
+  completedAt DateTime?
+  notes       String?
+  createdAt   DateTime  @default(now())
+
+  company  Company   @relation(fields: [companyId], references: [id])
+  quote    Quote     @relation(fields: [quoteId], references: [id])
+  customer Customer  @relation(fields: [customerId], references: [id])
+  assignee User?     @relation("assignee", fields: [assigneeId], references: [id])
+  photos   JobPhoto[]
+  invoice  Invoice?
+
+  @@index([companyId, status])
+  @@index([companyId, assigneeId, scheduledAt])
+}
+
+model JobPhoto {
+  id        String   @id @default(uuid())
+  companyId String
+  jobId     String
+  key       String   @unique
+  thumbKey  String?
+  createdAt DateTime @default(now())
+
+  job Job @relation(fields: [jobId], references: [id], onDelete: Cascade)
+
+  @@index([companyId, jobId])
+}
+
+model Invoice {
+  id        String        @id @default(uuid())
+  companyId String
+  jobId     String        @unique
+  status    InvoiceStatus @default(pending)
+  pdfKey    String?
+  total     Int
+  createdAt DateTime      @default(now())
+  readyAt   DateTime?
+
+  job Job @relation(fields: [jobId], references: [id])
+
+  @@index([companyId, status])
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  companyId String
+  userId    String?
+  action    String
+  entity    String
+  entityId  String
+  requestId String?
+  createdAt DateTime @default(now())
+
+  @@index([companyId, createdAt])
+}
