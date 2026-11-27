@@ -1,0 +1,5 @@
+{
+  "extends": "@fss/config/tsconfig.base.json",
+  "compilerOptions": { "noEmit": true, "module": "ESNext", "moduleResolution": "Bundler", "jsx": "react-jsx", "lib": ["ES2023", "DOM"], "types": [], "emitDecoratorMetadata": false, "experimentalDecorators": false },
+  "include": ["src"]
+}

@@ -1,0 +1,5 @@
+{
+  "extends": "@fss/config/tsconfig.base.json",
+  "compilerOptions": { "noEmit": true, "types": ["node"], "emitDecoratorMetadata": false, "experimentalDecorators": false },
+  "include": ["src"]
+}
